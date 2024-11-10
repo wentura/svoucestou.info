@@ -137,7 +137,7 @@ export default function Historie() {
                 <div className="flex justify-end w-full mx-auto items-center">
                   <div className="w-full sm:w-1/2 sm:pl-8">
                     <div className="p-4 bg-white rounded shadow">
-                      <strong>2017</strong> - "školka" v RC Chloumek
+                      <strong>2017</strong> - &quot;školka&quot; v RC Chloumek
                     </div>
                   </div>
                 </div>
