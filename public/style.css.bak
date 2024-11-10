@@ -1,0 +1,132 @@
+body {
+  font-size: 18px;
+}
+.color1 {
+  color: #625772ff !important;
+}
+.color2 {
+  color: #f38181ff !important;
+}
+.color3 {
+  color: #a9eee6 !important;
+}
+.border-color2 {
+  border-color: #f38181ff !important;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 10px #f3818188;
+  -webkit-box-shadow: 0px 0px 20px 10px #f3818188;
+}
+.text-shadow {
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.border-color3 {
+  border-color: #a9eee6 !important;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 10px rgba(169, 238, 230, 0.5);
+  -webkit-box-shadow: 0px 0px 20px 10px rgba(169, 238, 230, 0.5);
+}
+a.color-light,
+a:hover.color-light {
+  color: #c3c3c3;
+}
+.img_logo {
+  width: 100px;
+}
+section::before {
+  display: block;
+  content: "";
+  height: 60px;
+}
+.carousel {
+  /* padding-top:-20px; */
+  /* margin-top: -20px; */
+}
+.carousel-image {
+  /* max-height: 35vh; */
+}
+.hero {
+  /* min-height: 50vh!important; */
+}
+.hero-img {
+  border-radius: 20px;
+}
+.row-ruka {
+  display: flex;
+  justify-content: center;
+}
+.ruka {
+  width: 400px;
+}
+.alajn-midl {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.color1 {
+  color: darkgreen;
+}
+.color2 {
+  color: red;
+}
+
+.princip {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.bg-prusvitna {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.skola-skolka {
+  min-height: 350px;
+  border-radius: 20px !important;
+}
+blockquote {
+  font-size: 1.7rem !important;
+}
+
+.onas-photo {
+  /* max-height: 200px; */
+  height: 200px;
+  width: 200px;
+}
+.card-onas {
+  min-height: 400px;
+}
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.card-left {
+  text-align: left !important;
+}
+@media (max-width: 1200px) {
+  .skolka-skolka-img {
+    max-height: 150px !important;
+  }
+  .img_logo {
+    width: 40px !important;
+    max-width: 40px !important;
+    max-height: 50px !important;
+  }
+}
+@media (min-width: 768px) {
+  .news-input {
+    width: 50px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-sm-dark > li {
+    background-color: rgba(240, 240, 240, 0.9) !important;
+  }
+  .harmonogram {
+    font-size: 12px;
+  }
+  .img_logo {
+    width: 40px !important;
+    max-width: 40px !important;
+    max-height: 50px !important;
+  }
+}
