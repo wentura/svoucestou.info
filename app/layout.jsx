@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body className="open-sans-300 text-gray-700">
+      <body className="josefin-200 text-gray-700 max-w-4xl mx-auto">
         <Header />
         {children}
         {/* <Podpora /> */}

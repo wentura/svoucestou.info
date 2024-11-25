@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        "3xl": "1920px",
+        "4xl": "2460px",
+      },
       colors: {
         monte: {
           100: "#f38181ff",

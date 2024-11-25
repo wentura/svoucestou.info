@@ -7,7 +7,7 @@ export default function Historie() {
         <div className="py-3 sm:max-w-xl sm:mx-auto w-full px-2 sm:px-0">
           <div className="relative text-gray-700 antialiased text-sm font-semibold">
             {/* Vertical bar running through middle */}
-            <div className="hidden sm:block w-1 bg-red-200 sm:bg-red-500 absolute h-full left-1/2 transform -translate-x-1/2" />
+            <div className="hidden sm:block w-1 bg-monte-100 absolute h-full left-1/2 transform -translate-x-1/2" />
             {/* Left section, set by justify-start and sm:pr-8 */}
             <div className="mt-6 sm:mt-0 sm:mb-12">
               <div className="flex flex-col sm:flex-row items-center">
@@ -18,7 +18,7 @@ export default function Historie() {
                     </div>
                   </div>
                 </div>
-                <div className="rounded-full bg-red-200 sm:bg-red-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center"></div>
+                <div className="rounded-full bg-monte-100  border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center"></div>
               </div>
             </div>
             {/* Right section, set by justify-end and sm:pl-8 */}
@@ -26,13 +26,13 @@ export default function Historie() {
               <div className="flex flex-col sm:flex-row items-center">
                 <div className="flex justify-end w-full mx-auto items-center">
                   <div className="w-full sm:w-1/2 sm:pl-8">
-                    <div className="p-4 bg-white rounded shadow">
+                    <div className="p-4 bg-monte-300 rounded shadow">
                       <strong>říjen 2024</strong> - 1. škola v přírodě, Horní
                       Černá Studnice
                     </div>
                   </div>
                 </div>
-                <div className="rounded-full bg-red-200 sm:bg-red-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center"></div>
+                <div className="rounded-full bg-monte-100 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center"></div>
               </div>
             </div>
             {/* Left section, set by justify-start and sm:pr-8 */}

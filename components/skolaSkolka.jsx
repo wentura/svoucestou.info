@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function SkolaSkolka() {
   return (
-    <section className="bg-monte-150 py-12 my-12 md:py-24 md:my-24">
+    <section className="bg-monte-200 py-12 my-12 md:py-24 md:my-24">
       <div className="container  mx-auto">
         {/* <h1 className="mb-20 text-2xl font-medium text-center text-gray-900 sm:text-3xl title-font">
           Raw Denim Heirloom Man Braid
