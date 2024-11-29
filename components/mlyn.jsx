@@ -29,7 +29,7 @@ export default function Mlyn() {
             alt="hero"
             src="https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399711/svoucestou.info/mlyn_krouzek.webp"
           />
-          <p className="leading-relaxed pb-2 text-right opacity-25 group-hover:opacity-80 transition duration-300 ease-in-out">
+          {/* <p className="leading-relaxed pb-2 text-right opacity-25 group-hover:opacity-80 transition duration-300 ease-in-out">
             <a
               href="https://www.mlynkrouzek.cz"
               target="_blank"
@@ -37,7 +37,7 @@ export default function Mlyn() {
             >
               více o mlýnu Kroužek
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </section>

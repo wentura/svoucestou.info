@@ -7,16 +7,19 @@ export default function Tym() {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col w-full mb-20">
           <h1 className="textNadpis">Kdo jsme?</h1>
-          <p className="leading-relaxed py-8">
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-            gentrify, subway tile poke farm-to-table. Franzen you probably
-            haven&apos;t heard of them.
+          <p className="leading-relaxed py-8 lg:w-1/2 self-end">
+            V naší Montessori školce a škole vytváříme prostředí, kde se děti
+            cítí bezpečně a podporovány v objevování světa kolem sebe. Každý z
+            nás přináší do týmu jedinečné zkušenosti a dovednosti, které
+            společně využíváme k rozvoji potenciálu každého dítěte. Věříme, že
+            individuální přístup a vzájemný respekt jsou klíčem k harmonickému a
+            efektivnímu vzdělávání.
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
           {tymData.map((item, index) => (
-            <div className="p-4 lg:w-1/2 mx-auto " key={index}>
-              <div className="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left">
+            <div className="p-4 lg:w-1/2 mx-auto w-full" key={index}>
+              <div className="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left ">
                 <Image
                   alt="team"
                   className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0"

@@ -17,7 +17,7 @@ export default function Usp() {
             >
               <div className="flex flex-col h-full px-6 py-10 border border-monte-100 rounded-lg shadow-xl hover:shadow-lg">
                 <div className="flex items-center mb-3">
-                  <h2 className="text-lg md:text-xl text-gray-100 font-semibold py-4">
+                  <h2 className="text-xl md:text-2xl text-gray-100 font-semibold py-4">
                     {item.title}
                   </h2>
                 </div>

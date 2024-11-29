@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { navigationData } from "./navigationData";
 // import React from "react";
 export default function Header() {
   return (
@@ -19,19 +20,15 @@ export default function Header() {
           <span className="textNadpis lg:text-5xl">Svou cestou</span>
         </Link>
         <nav className="flex flex-wrap items-center justify-center md:ml-auto">
-          <Link className="mr-5 hover:text-gray-900" href="/skolka">
-            co je montessori
-          </Link>
-
-          <Link className="mr-5 hover:text-gray-900" href="/skolka">
-            školka
-          </Link>
-          <Link className="mr-5 hover:text-gray-900" href="/skola">
-            škola
-          </Link>
-          <Link className="mr-5 hover:text-gray-900" href="/o-nas">
-            o nás
-          </Link>
+          {navigationData.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="mr-5 hover:text-gray-900"
+            >
+              {item.title}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>

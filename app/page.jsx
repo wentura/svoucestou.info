@@ -14,7 +14,7 @@ import Vice from "@/components/vice.jsx";
 import Image from "next/image";
 export default function Home() {
   return (
-    <main className="">
+    <main className="text-lg">
       <Hero />
       <Features />
       <SkolaSkolka2 />
