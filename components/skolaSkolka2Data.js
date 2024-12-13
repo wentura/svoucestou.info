@@ -17,6 +17,6 @@ export const skolaSkolka2Data = [
     title: "Škola 12+",
     text: "6. až 9. třída",
     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732909970/svoucestou.info/rozcestnik/3.webp",
-    url: "/skola",
+    url: "/skola12",
   },
 ];

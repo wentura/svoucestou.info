@@ -16,7 +16,7 @@ export const navigationData = [
   },
   {
     title: "Škola 12+",
-    href: "/skola",
+    href: "/skola12",
     icon: "skola",
   },
   {
