@@ -10,8 +10,8 @@ export const newsData = [
   {
     title: "Navštívili nás budoucí učitelé",
     subtite: "návštěva",
-    datum: "1.10.2024",
-    text: "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+    datum: "červen 2024",
+    text: "Naši školu oslovila brněnská spolecnost Lipka s prosbou, zda by mohli učitelé z klasických škol přijet na exkurzi k nám. Zkušený páťák je provedl školou, představil jim vybrané učební pomůcky a ukázal venkovní prostory, které využíváme pro školní projekty starších žáků.",
     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399713/svoucestou.info/448996529_1032759518853348_1351890881870249553_n.webp",
     url: "/news",
   },
