@@ -31,7 +31,7 @@ export default function Podpora() {
         <div className="flex flex-col md:w-1/2 md:pl-12">
           <div className="flex flex-wrap list-none -mb-1">
             {PodporaData.map((item, index) => (
-              <div className="lg:w-1/3 md:w-1/2 my-4 px-4" key={index}>
+              <div className="2xl:w-1/3 md:w-1/2 my-4 px-4" key={index}>
                 <a href={item.url} className="flex flex-col">
                   <div className="">{item.name}</div>
                   <div className="text-sm">{item.subname}</div>

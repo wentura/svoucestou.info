@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 // import React from "react";
 import { tymData } from "./tymData";
 export default function Tym() {
@@ -18,18 +19,19 @@ export default function Tym() {
         </div>
         <div className="flex flex-wrap -m-4">
           {tymData.map((item, index) => (
-            <div
-              className={`p-4 lg:w-1/2 mx-auto w-full ${item.klass}`}
-              key={index}
-            >
-              <div className="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left ">
+            <div className={`p-4 lg:w-1/2 mx-auto w-full `} key={index}>
+              {" "}
+              <div
+                className={`flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left `}
+              >
                 <Image
                   alt="team"
-                  className={`flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0 ${item.klassImg}`}
+                  className={`flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0 ${item.klassImg} ${item.klass}`}
                   src={item.img}
                   width={200}
                   height={200}
                 />
+
                 <div className="flex-grow sm:pl-8">
                   <h2 className="text-lg font-medium text-gray-900 title-font">
                     {item.titulPred} {item.name}
@@ -160,10 +162,42 @@ export default function Tym() {
                       </a>
                     )}
                   </span>
+                  {item.cross && (
+                    <div className="font-extrabold uppercase text-2xl text-monte-100">
+                      {item.cross}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           ))}
+          <div className={`p-4 lg:w-1/2 mx-auto w-full md:m-0`}>
+            <div
+              className={`flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left `}
+            >
+              <Image
+                alt="team"
+                className={`flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0 `}
+                src="/person.png"
+                width={200}
+                height={200}
+              />
+
+              <div className="flex-grow sm:pl-8">
+                <h3 className="mt-4 text-gray-500 text-2xl font-bold uppercase">
+                  přidejte se k nám
+                  <br />
+                  jako průvodce
+                </h3>
+                <Link
+                  href="/kontakt"
+                  className="mt-4 font-bold text-monte-100 underline underline-offset-2"
+                >
+                  kontaktujte nás
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

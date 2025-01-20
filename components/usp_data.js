@@ -11,10 +11,10 @@ const uspData = [
     title: "Angličtina s rodilým mluvčím",
     text: "Přirozená forma výuky jazyka, která pomáhá dětem osvojit si angličtinu už od raného věku.",
   },
-  {
-    title: "Lekce s nadanou výtvarnicí",
-    text: "Spolupracujeme s vystudovanou výtvarnicí, která je inspiruje k rozvoji kreativity a sebevyjádření prostřednictvím uměleckých aktivit.",
-  },
+  // {
+  //   title: "Lekce s nadanou výtvarnicí",
+  //   text: "Spolupracujeme s vystudovanou výtvarnicí, která je inspiruje k rozvoji kreativity a sebevyjádření prostřednictvím uměleckých aktivit.",
+  // },
   {
     title: "Hudební výchovu zajišťuje...",
     text: "multiinstrumentálně nadaná muzikantka, která děti vede k objevování krásy hudby, rytmu a hry na různé nástroje.",
