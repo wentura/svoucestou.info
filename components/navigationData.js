@@ -14,21 +14,21 @@ export const navigationData = [
     href: "/skola",
     icon: "skola",
   },
-  {
-    title: "Škola 12+",
-    href: "/skola12",
-    icon: "skola",
-  },
+  // {
+  // 	title: "Škola 12+",
+  // 	href: "/skola12",
+  // 	icon: "skola",
+  // },
   {
     title: "Novinky",
     href: "/novinky",
     icon: "novinky",
   },
-  {
-    title: "O nás",
-    href: "/o-nas",
-    icon: "o-nas",
-  },
+  //   {
+  //     title: "O nás",
+  //     href: "/o-nas",
+  //     icon: "o-nas",
+  //   },
   {
     title: "Kontakt",
     href: "/kontakt",

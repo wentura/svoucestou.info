@@ -3,7 +3,7 @@ export const tymData = [
     titulPred: "Bc. ",
     titulZa: ", DiS.",
     name: "Běla Šestáková",
-    title: "zakladatelka, průvodce",
+    title: "zakladatelka, průvodkyně pro školku i školu",
     claim: "moje motto",
     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399635/svoucestou.info/pruvodci/B.webp",
     klass: "",
@@ -44,7 +44,7 @@ export const tymData = [
   },
   {
     name: "Steve",
-    title: "rodilý mluvčí a chovatel psů",
+    title: "lektor anglického jazyka (rodilý mluvčí) a chovatel psů",
     claim: "moje motto",
     img: "/person.png",
     // img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399634/svoucestou.info/pruvodci/M.webp",
@@ -60,7 +60,7 @@ export const tymData = [
     titulPred: "Ing. ",
     titulZa: ", DiS.",
     name: "Michaela Vávrová",
-    title: "pohybové aktivity",
+    title: "pohybové aktivity a turistika",
     claim: "moje motto",
     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1734088562/svoucestou.info/pruvodci/misa2.webp",
     // img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399634/svoucestou.info/pruvodci/M.webp",
@@ -87,7 +87,7 @@ export const tymData = [
   },
   {
     name: "Tomáš Nebeský",
-    title: "pohybové aktivity",
+    title: "pohybové aktivity a turistika",
     claim: "moje motto",
     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1737387022/svoucestou.info/pruvodci/tomas.webp",
     klass: "",
@@ -101,7 +101,7 @@ export const tymData = [
   {
     cross: "nyní v zahraničí",
     name: "Martin Yo",
-    title: "pohybové aktivity",
+    title: "pohybové aktivity a hry",
     claim: "moje motto",
     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399634/svoucestou.info/pruvodci/M.webp",
     // img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399634/svoucestou.info/pruvodci/M.webp",
@@ -115,7 +115,7 @@ export const tymData = [
   },
   {
     name: "Zbyněk Svoboda",
-    title: "nic a všechno",
+    title: "IT, zahrada, hry",
     claim: "nic není nemožné, toyota",
     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1685532355/zbyneksvoboda/me_smhw9x.webp",
     // img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399635/svoucestou.info/pruvodci/Z.webp",

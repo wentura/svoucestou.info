@@ -38,7 +38,7 @@ export default function Tym() {
                     {item.titulZa}
                   </h2>
                   <h3 className="mb-3 text-gray-500">{item.title}</h3>
-                  <p className="mb-4">{item.claim}</p>
+                  {/* <p className="mb-4">{item.claim}</p> */}
                   <span className="inline-flex gap-x-2">
                     {/* facebook */}
 
@@ -140,7 +140,7 @@ export default function Tym() {
                       </a>
                     )}
                     {/* eshop */}
-                    {item.eshop == "" ? (
+                    {/* {item.eshop == "" ? (
                       ""
                     ) : (
                       <a
@@ -160,7 +160,7 @@ export default function Tym() {
                           ></path>
                         </svg>
                       </a>
-                    )}
+                    )} */}
                   </span>
                   {item.cross && (
                     <div className="font-extrabold uppercase text-2xl text-monte-100">

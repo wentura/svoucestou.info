@@ -8,13 +8,13 @@ export default function Skolka() {
           <h1 className="textNadpis">Montessori vzdělávání</h1>
           <h3 className="textPodNadpis">Respektující cesta k rozvoji dítěte</h3>
         </div>
-        <div className="rounded-lg h-96 overflow-hidden">
+        {/* <div className="rounded-lg h-96 overflow-hidden">
           <img
             alt="content"
             className="object-cover object-center h-full w-full"
             src="https://dummyimage.com/1200x500"
           />
-        </div>
+        </div> */}
         <div className="sm:pr-8 sm:py-8">
           <h3 className="textPodNadpis mb-4 mt-12">
             Proč Montessori vzdělávání?

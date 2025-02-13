@@ -10,13 +10,13 @@ export default function KontaktPage() {
           <h3 className="textPodNadpis">Montessori škola a školka</h3>
         </div>
 
-        <div className="rounded-lg h-96 overflow-hidden">
+        {/* <div className="rounded-lg h-96 overflow-hidden">
           <img
             alt="content"
             className="object-cover object-center h-full w-full"
             src="https://dummyimage.com/1200x500"
           />
-        </div>
+        </div> */}
         <div className="block md:hidden -my-24">
           <Kontakt />
         </div>

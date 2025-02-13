@@ -8,13 +8,13 @@ export default function Skola() {
           <h1 className="textNadpis">Montessori škola</h1>
           <h3 className="textPodNadpis">Cesta k poznání světa</h3>
         </div>
-        <div className="rounded-lg h-96 overflow-hidden">
+        {/* <div className="rounded-lg h-96 overflow-hidden">
           <img
             alt="content"
             className="object-cover object-center h-full w-full"
             src="https://dummyimage.com/1200x500"
           />
-        </div>
+        </div> */}
         <div className="flex flex-col sm:flex-row mt-10">
           <div className="sm:w-1/2 sm:pr-8 sm:py-8">
             <h3 className="textPodNadpis mb-4">Pro děti od 5 do 12+ let</h3>

@@ -8,13 +8,13 @@ export default function Skolka() {
           <h1 className="textNadpis">Montessori školka</h1>
           <h3 className="textPodNadpis">Objevování světa rukama a srdcem</h3>
         </div>
-        <div className="rounded-lg h-96 overflow-hidden">
+        {/* <div className="rounded-lg h-96 overflow-hidden">
           <img
             alt="content"
             className="object-cover object-center h-full w-full"
             src="https://dummyimage.com/1200x500"
           />
-        </div>
+        </div> */}
 
         <div className="flex flex-col sm:flex-row mt-10">
           <div className="sm:w-1/2 sm:pr-8 sm:py-8">

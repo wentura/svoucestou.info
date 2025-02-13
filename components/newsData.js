@@ -1,12 +1,12 @@
 export const newsData = [
-  {
-    title: "Pitchfork Kickstarter Taxidermy",
-    subtite: "vylet",
-    datum: "11.11.2024",
-    text: "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-    img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399715/svoucestou.info/433280086_957915323004435_780922250576987527_n.webp",
-    url: "/news",
-  },
+  //   {
+  //     title: "Pitchfork Kickstarter Taxidermy",
+  //     subtite: "vylet",
+  //     datum: "11.11.2024",
+  //     text: "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+  //     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399715/svoucestou.info/433280086_957915323004435_780922250576987527_n.webp",
+  //     url: "/news",
+  //   },
   {
     title: "Navštívili nás budoucí učitelé",
     subtite: "návštěva",
