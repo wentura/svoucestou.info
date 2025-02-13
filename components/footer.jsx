@@ -126,6 +126,12 @@ export default function Footer() {
           </span>
         </div>
       </div>
+      <img
+        referrerPolicy="no-referrer"
+        src="http://matomo.zbyneksvoboda.cz/matomo.php?idsite=6&amp;rec=1"
+        style="border:0"
+        alt=" "
+      />
     </footer>
   );
 }
