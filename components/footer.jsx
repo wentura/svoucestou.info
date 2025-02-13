@@ -102,7 +102,7 @@ export default function Footer() {
       <div className="bg-gray-100">
         <div className="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
           <p className="text-sm text-center text-gray-500 sm:text-left">
-            2017 - 2024 - Svou cestou - Montessori guru z.s. ,{" "}
+            2017 - 2025 - Svou cestou - Montessori guru z.s. ,{" "}
             <a
               href="https://www.zbyneksvoboda.cz"
               className="ml-1 text-gray-500 underline underline-offset-2 decoration-gray-400"
