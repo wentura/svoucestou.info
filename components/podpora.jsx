@@ -1,7 +1,7 @@
 import { PodporaData } from "./podporaData";
 export default function Podpora() {
   return (
-    <section className="bg-monte-200 py-12 mt-12 md:py-24 md:mt-24 group text-gray-100">
+    <section className="bg-monte-200 py-4 mt-12 md:py-2 md:mt-24 group text-gray-100 rounded-t-xl">
       <div className="container flex flex-wrap px-5 py-24 mx-auto items-center">
         <div className="md:w-1/2 md:pr-12 md:py-8  mb-10 md:mb-0 pb-10 ">
           <h1 className="sm:text-3xl text-2xl textNadpis mb-2 ">

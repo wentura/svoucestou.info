@@ -3,7 +3,7 @@ import React from "react";
 import { skolaSkolka2Data } from "./skolaSkolka2Data";
 export default function SkolaSkolka2() {
   return (
-    <section className="text-gray-600 body-font bg-monte-200 px-4 py-10 sm:px-6 lg:py-24 mx-auto">
+    <section className="text-gray-600 body-font bg-monte-200 px-4 py-10 sm:px-4 lg:py-2 mx-auto rounded-xl">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap -m-4 justify-center">
           {skolaSkolka2Data.map((item, index) => (

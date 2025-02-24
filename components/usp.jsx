@@ -3,7 +3,7 @@ import Mlyn from "./mlyn";
 import uspData from "./usp_data";
 export default function Usp() {
   return (
-    <section className="bg-monte-200 py-12 my-12 md:py-24 md:my-24 group text-gray-100">
+    <section className="bg-monte-200 py-4 my-12 md:py-2 md:my-24 group text-gray-100 rounded-xl">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col w-full mb-8">
           {/* <h1 className="text-2xl font-medium text-gray-900 sm:text-3xl title-font"> */}

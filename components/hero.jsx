@@ -3,7 +3,7 @@
 export default function Hero() {
   return (
     <div
-      className="hero min-h-[250px] lg:min-h-[700px] flex items-center justify-center bg-centerbg-no-repeat bg-cover bg-[url(https://res.cloudinary.com/dam7wdzvx/image/upload/v1732404552/svoucestou.info/hero.webp)] bg-[#00000044] bg-blend-darken"
+      className="hero min-h-[250px] lg:min-h-[700px] flex items-center justify-center bg-centerbg-no-repeat bg-cover bg-[url(https://res.cloudinary.com/dam7wdzvx/image/upload/v1732404552/svoucestou.info/hero.webp)] bg-[#00000044] bg-blend-darken rounded-xl"
       // style={{
       //   backgroundImage:
       //     "url(https://res.cloudinary.com/dam7wdzvx/image/upload/v1732404552/svoucestou.info/hero.webp)",

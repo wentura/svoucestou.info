@@ -99,7 +99,7 @@ export default function Footer() {
           </div>
         </div>
       </div> */}
-      <div className="bg-gray-900 pt-12 pb-12">
+      <div className="bg-monte-200 pt-12 pb-12">
         <div className="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
           <p className="text-sm text-center text-gray-200 sm:text-left">
             2017 - 2025 - Svou cestou - Montessori guru z.s. ,{" "}
