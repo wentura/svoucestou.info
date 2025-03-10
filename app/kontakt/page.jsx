@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 export default function KontaktPage() {
   return (
-    <section className="text-gray-600 body-font relative">
+    <section className="">
       <div className="container px-5 py-12 mx-auto flex flex-col">
         <div className="hidden md:block headingPage mb-4">
           <h1 className="textNadpis">Svou cestou</h1>

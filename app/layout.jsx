@@ -1,6 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Podpora from "@/components/podpora";
+import RunningText from "@/components/runningText";
 // import localFont from "next/font/local";
 import "../public/style.css";
 import "./globals.css";
@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
     <html>
       <body className="josefin-200 text-gray-700 max-w-4xl mx-auto">
         <Header />
+
         {children}
         {/* <Podpora /> */}
         <Footer />

@@ -5,8 +5,8 @@ import React from "react";
 
 export default function ShortNews() {
   return (
-    <section className="text-gray-600  px-4 py-10 sm:px-6 mx-auto">
-      <div className="container px-5 py-24 mx-auto">
+    <section>
+      <div className="container px-5 py-12 mx-auto flex flex-col">
         <div className="flex flex-wrap w-full mb-20">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="textNadpis">Aktuality a novinky</h1>

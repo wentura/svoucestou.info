@@ -29,7 +29,7 @@
     font-family: "Yeseva One", serif;
     font-weight: 400;
     font-style: normal;
-    @apply text-monte-100 text-4xl lg:text-6xl xl:text-7xl font-extrabold;
+    @apply text-monte-100 text-2xl lg:text-5xl xl:text-7xl font-extrabold;
   }
   .textPodNadpis {
     @apply text-xl sm:text-2xl text-gray-800;

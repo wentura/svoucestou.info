@@ -1,0 +1,28 @@
+.tickerContainer {
+  background-color: #f38181ff;
+  color: white;
+  font-weight: 400;
+  padding: 8px 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 5px 0 10px 0;
+}
+
+.ticker {
+  display: inline-block;
+  animation: ticker 50s linear infinite;
+}
+
+.ticker span {
+  margin-right: 50px;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
