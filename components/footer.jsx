@@ -130,7 +130,7 @@ export default function Footer() {
         referrerPolicy="no-referrer"
         src="http://matomo.zbyneksvoboda.cz/matomo.php?idsite=6&amp;rec=1"
         style={{ border: "0" }}
-        alt=" "
+        alt="matomo"
       />
     </footer>
   );
