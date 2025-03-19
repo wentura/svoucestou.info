@@ -8,6 +8,23 @@ export const newsData = [
   //     url: "/news",
   //   },
   {
+    title:
+      "Návštěva botanické zahrady: mikroskopování, masožravky a nový kamarád...",
+    subtite: "návštěva",
+    datum: "březen 2025",
+    text: "Vyrazili jsme do botanické zahrady, kde děti měly možnost nahlédnout do fascinujícího světa rostlin. Užily si mikroskopování, objevovaly skryté detaily přírody a v pavilonu Fata Morgana se zúčastnily poutavé přednášky o masožravých rostlinách. A to nejlepší? Neodjely jsme s prázdnou – přivezly jsme si nového třídního mazlíčka, strašilku Karla!",
+    img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1742374758/svoucestou.info/news/2.webp",
+    url: "/news",
+  },
+  {
+    title: "Objevujeme krásy okolní přírody!",
+    subtite: "turistika",
+    datum: "listopad 2024 - únor 2025",
+    text: "Naše děti se pravidelně vydávají na turistické výpravy za poznáním a dobrodružstvím. Při svých cestách objevují nejen malebné lesní stezky a tajuplné jeskyně, ale i zapomenuté mlýny a mokřady. Pozorují koně a ovce na pastvinách, divoká zvířata v jejich přirozeném prostředí a dokonce i exotické druhy ptactva. Každý výlet je novým objevem a příležitostí k učení skrze vlastní zkušenost.",
+    img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1742374758/svoucestou.info/news/3.webp",
+    url: "/news",
+  },
+  {
     title: "Navštívili nás budoucí učitelé",
     subtite: "návštěva",
     datum: "červen 2024",
