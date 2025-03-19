@@ -13,7 +13,7 @@ export const newsData = [
     subtite: "návštěva",
     datum: "březen 2025",
     text: "Vyrazili jsme do botanické zahrady, kde děti měly možnost nahlédnout do fascinujícího světa rostlin. Užily si mikroskopování, objevovaly skryté detaily přírody a v pavilonu Fata Morgana se zúčastnily poutavé přednášky o masožravých rostlinách. A to nejlepší? Neodjely jsme s prázdnou – přivezly jsme si nového třídního mazlíčka, strašilku Karla!",
-    img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1742374758/svoucestou.info/news/2.webp",
+    img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1742374758/svoucestou.info/news/1.webp",
     url: "/news",
   },
   {
