@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import Matomo from "./Matomo";
 import { navigationData } from "./navigationData";
 import { sockyData } from "./sockyData";
-
 export default function Footer() {
   return (
     <footer className="text-gray-900 body-font">
@@ -126,12 +126,7 @@ export default function Footer() {
           </span>
         </div>
       </div>
-      <img
-        referrerPolicy="no-referrer"
-        src="http://matomo.zbyneksvoboda.cz/matomo.php?idsite=6&amp;rec=1"
-        style={{ border: "0" }}
-        alt="matomo"
-      />
+      <Matomo />
     </footer>
   );
 }
