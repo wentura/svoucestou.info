@@ -1,12 +1,15 @@
 "use client";
+import React from "react";
 
 export default function Matomo() {
   return (
-    <img
-      referrerPolicy="no-referrer"
-      src="https://matomo.zbyneksvoboda.cz/matomo.php?idsite=6&amp;rec=1"
-      style={{ border: "0" }}
-      alt="matomo"
-    />
+    <div>
+      <img
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://matomo.zbyneksvoboda.cz/matomo.php?idsite=6&amp;rec=1"
+        className="border-0"
+        alt="matomo analytics"
+      />
+    </div>
   );
 }
