@@ -6,14 +6,22 @@ export const newsData = [
   //     text: "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
   //     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399715/svoucestou.info/433280086_957915323004435_780922250576987527_n.webp",
   //     url: "/news",
-  //   },
+  //   },https://res.cloudinary.com/dam7wdzvx/image/upload/v1746256962/svoucestou.info/news/mozaika1.webp
   {
     title:
       "Návštěva botanické zahrady: mikroskopování, masožravky a nový kamarád...",
-    subtite: "návštěva",
+    subtite: "exkurze",
     datum: "březen 2025",
     text: "Vyrazili jsme do botanické zahrady, kde děti měly možnost nahlédnout do fascinujícího světa rostlin. Užily si mikroskopování, objevovaly skryté detaily přírody a v pavilonu Fata Morgana se zúčastnily poutavé přednášky o masožravých rostlinách. A to nejlepší? Neodjely jsme s prázdnou – přivezly jsme si nového třídního mazlíčka, strašilku Karla!",
     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1742374758/svoucestou.info/news/1.webp",
+    url: "/news",
+  },
+  {
+    title: "Návštěva u adolescentů v Mozaice (Mnichovice)",
+    subtite: "exkurze",
+    datum: "20.11.2024",
+    text: "Navštívili jsem kamarády v Mozaice (Mnichovice), aby jsme zjitili jak se jim daří a načerpali inspiraci do dalších školních projektů. Dětem se otevřely oči, když viděly, co vše je možné a ihned začaly plánovat. Nám dospělým návštěva pomohla se ujistit, že jdeme správnou cestou a velmi jsem si užili společný čas v jiném prostředí.",
+    img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1746256962/svoucestou.info/news/mozaika1.webp",
     url: "/news",
   },
   {

@@ -23,7 +23,7 @@ export default function Header() {
         </Link>
         <Navigation />
       </div>
-      {/* <RunningText /> */}
+      <RunningText />
     </header>
   );
 }
