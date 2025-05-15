@@ -8,6 +8,23 @@ export const newsData = [
   //     url: "/news",
   //   },https://res.cloudinary.com/dam7wdzvx/image/upload/v1746256962/svoucestou.info/news/mozaika1.webp
   {
+    title: "Přístřešek pro pec na chleba",
+    subtite: "stavba",
+    datum: "15.května 2025",
+    text: "Začínáme stavět přístřešek pro naši pec na chleba, která bude následovat! Zatím jen pár trámků, ale už teď se těšíme, až tu zavoní první bochník. Pomalu a poctivě budujeme místo, kde se bude dobře péct i potkávat.",
+    img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1747321896/svoucestou.info/news/155.webp",
+    url: "/news",
+  },
+  {
+    title: "Včelky se rozhodly vyrojit!",
+    subtite: "včely",
+    datum: "2.května 2025",
+    text: "Dnes bylo u nás pěkně rušno – včelky se rozhodly vyrojit! Naštěstí všechno dobře dopadlo a roj jsme bezpečně usadili zpátky do úlu. Teď už zase pilně pracují tam, kde mají. Díky, přírodo, za tohle krásné divadlo!",
+    img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1747321896/svoucestou.info/news/025.webp",
+    url: "/news",
+  },
+
+  {
     title:
       "Návštěva botanické zahrady: mikroskopování, masožravky a nový kamarád...",
     subtite: "exkurze",
