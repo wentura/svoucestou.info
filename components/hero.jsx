@@ -13,9 +13,11 @@ export default function Hero() {
         <h1 className="mt-44 lg:mt-96 textNadpis lg:text-8xl text-monte-100 mb-8">
           Montessori školka a škola
         </h1>
-        <p className="mb-2 textPodNadpis text-gray-50 lg:text-4xl josefin-200">
-          Děti rostou v prostředí, které podněcuje jejich zvídavost a
-          kreativitu.
+        <p className="mb-2 textPodNadpis text-gray-50 lg:text-4xl josefin-200 max-w-screen-lg">
+          {/* Děti rostou v prostředí, které podněcuje jejich zvídavost a
+          kreativitu. */}
+          Škola, kde děti rostou s respektem a láskou k sobě i ostatním a s
+          důvěrou, že život je cesta plná možností.
         </p>
       </div>
     </div>
