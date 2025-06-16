@@ -16,13 +16,23 @@ export default function ShortNews() {
           {newsData.map((item, index) => (
             <div className={`xl:w-1/4 md:w-1/2 p-4 `} key={index}>
               <div className="bg-gray-50 rounded-lg">
-                <Image
-                  className="h-80 rounded-lg w-full object-cover object-center"
-                  src={item.img}
-                  alt={item.title}
-                  width={350}
-                  height={350}
-                />
+                {item.video ? (
+                  <video
+                    src={item.video}
+                    autoPlay
+                    muted
+                    loop
+                    className="h-80 rounded-lg w-full object-cover object-center"
+                  />
+                ) : (
+                  <Image
+                    className="h-80 rounded-lg w-full object-cover object-center"
+                    src={item.img}
+                    alt={item.title}
+                    width={400}
+                    height={400}
+                  />
+                )}
                 <div className="p-6">
                   <p className="text-sm">
                     {item.datum} | {item.subtite}

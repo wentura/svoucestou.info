@@ -7,6 +7,16 @@ export const newsData = [
   //     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399715/svoucestou.info/433280086_957915323004435_780922250576987527_n.webp",
   //     url: "/news",
   //   },https://res.cloudinary.com/dam7wdzvx/image/upload/v1746256962/svoucestou.info/news/mozaika1.webp
+
+  {
+    title: "Pec na chleba",
+    subtite: "stavba",
+    datum: "30.května 2025",
+    text: "Díky Honzovi Křivonožkovi a jeho celé rodině za stavbu chlebové pece. Byl to super víkend a děti (i dospělí) si ho užily a všichni se těšíme na první chléb z naší pece.",
+    video:
+      "https://res.cloudinary.com/dam7wdzvx/video/upload/v1750073283/svoucestou.info/news/IMG_5306.webm",
+    url: "/news",
+  },
   {
     title: "Přístřešek pro pec na chleba",
     subtite: "stavba",
