@@ -8,6 +8,10 @@ const uspData = [
     text: "Výchova v přírodě, v klidu a v souladu s okolím, mimo ruch města.",
   },
   {
+    title: "Matematika, fyzika a chemie",
+    text: "Projektové učení, praktické aktivity a experimenty.",
+  },
+  {
     title: "Angličtina s rodilým mluvčím",
     text: "Přirozená forma výuky jazyka, která pomáhá dětem osvojit si angličtinu už od raného věku.",
   },
