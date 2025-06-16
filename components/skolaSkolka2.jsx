@@ -19,7 +19,7 @@ export default function SkolaSkolka2() {
                 className={`bg-cover  bg-[#00000066] bg-blend-darken h-full px-12 py-16 rounded-lg overflow-hidden text-center relative`}
               >
                 <div className="py-12">
-                  <h1 className="lobster text-4xl md:text-5xl xl:text-6xl font-bold text-monte-100">
+                  <h1 className="textNadpis text-4xl md:text-5xl xl:text-6xl font-bold text-monte-100">
                     {item.title}
                   </h1>
                   {/* <p className="tracking-tight textPodNadpis">{item.text}</p> */}

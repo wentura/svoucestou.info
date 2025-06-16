@@ -9,16 +9,17 @@ export default function Hero() {
       //     "url(https://res.cloudinary.com/dam7wdzvx/image/upload/v1732404552/svoucestou.info/hero.webp)",
       // }}
     >
-      <div className="p-12 bg-opacity-40 rounded-3xl align-bottom ">
-        <h1 className="mt-44 lg:mt-96 textNadpis lg:text-8xl text-monte-100 mb-8">
-          Montessori školka a škola
-        </h1>
-        <p className="mb-2 textPodNadpis text-gray-50 lg:text-4xl josefin-200 max-w-screen-lg">
-          {/* Děti rostou v prostředí, které podněcuje jejich zvídavost a
-          kreativitu. */}
-          Škola, kde děti rostou s respektem a láskou k sobě i ostatním a s
-          důvěrou, že život je cesta plná možností.
-        </p>
+      <div className="p-12 bg-opacity-40 rounded-3xl align-bottom mt-44 lg:mt-96">
+        <div className="flex flex-col bg-black/10 p-4 rounded-lg backdrop-blur-sm">
+          <h1 className=" textNadpis lg:text-8xl text-monte-100 pb-8">
+            Montessori školka a škola
+          </h1>
+          <p className="mb-2 textPodNadpis font-medium text-gray-50 lg:text-4xl josefin-200 max-w-screen-lg">
+            Škola, kde děti rostou s respektem a láskou k sobě i ostatním a s
+            důvěrou, že život je cesta plná možností.
+          </p>
+        </div>
+        
       </div>
     </div>
     // <section className="text-gray-600 body-font">
