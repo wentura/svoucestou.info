@@ -19,7 +19,7 @@ export default function Header() {
             className="w-12 md:w-16 h-auto"
             alt="Svou cestou"
           />
-          <span className="textNadpis">Svou cestou</span>
+          <span className="textNadpis pl-6">Svou cestou</span>
         </Link>
         <Navigation />
       </div>
