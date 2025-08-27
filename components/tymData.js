@@ -18,7 +18,7 @@ export const tymData = [
     name: "Lucie Svobodová",
     title: "hlavní průvodkyně ve školce",
     claim: "moje motto",
-    img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1750190488/svoucestou.info/pruvodci/luckaweb.webp",
+    img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1756284676/svoucestou.info/pruvodci/lucka_copy.webp",
     klass: "",
     facebook: "",
     instagram: "",
