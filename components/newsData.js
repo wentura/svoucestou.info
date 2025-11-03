@@ -9,6 +9,15 @@ export const newsData = [
   //   },https://res.cloudinary.com/dam7wdzvx/image/upload/v1746256962/svoucestou.info/news/mozaika1.webp
 
   {
+    title: "Jan Kršňák - Digiděti",
+    subtite: "přednáška",
+    datum: "23.října 2025",
+    text: "Díky Honzovi Kšňákovi za přednášku Digiděti. Děti měly celý den možnost se seznámit s nástrahami technologií a moderního internetu. Odpoledne děti vystřídali rodiče a bylo to také velmi inspirativní a poučné. https://digideti.cz/",
+    img:
+      "https://res.cloudinary.com/dam7wdzvx/image/upload/v1762169451/svoucestou.info/news/krsnak.webp",
+    url: "/news",
+  },
+  {
     title: "Pec na chleba",
     subtite: "stavba",
     datum: "30.května 2025",

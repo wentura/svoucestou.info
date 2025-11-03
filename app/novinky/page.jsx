@@ -2,6 +2,7 @@ import { newsData } from "@/components/newsData";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import AutoPlayVideo from "@/components/AutoPlayVideo";
 
 export default function ShortNews() {
   return (
@@ -17,12 +18,10 @@ export default function ShortNews() {
             <div className={`xl:w-1/4 md:w-1/2 p-4 `} key={index}>
               <div className="bg-gray-50 rounded-lg">
                 {item.video ? (
-                  <video
+                  <AutoPlayVideo
                     src={item.video}
-                    autoPlay
-                    muted
-                    loop
                     className="h-80 rounded-lg w-full object-cover object-center"
+                    alt={item.title}
                   />
                 ) : (
                   <Image
