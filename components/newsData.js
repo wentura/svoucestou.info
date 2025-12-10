@@ -7,6 +7,25 @@ export const newsData = [
   //     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399715/svoucestou.info/433280086_957915323004435_780922250576987527_n.webp",
   //     url: "/news",
   //   },https://res.cloudinary.com/dam7wdzvx/image/upload/v1746256962/svoucestou.info/news/mozaika1.webp
+  {
+    title: "školní kavárna",
+    subtite: "káva",
+    datum: "27.listopadu 2025",
+    text: "Naše školní kavárna je na světě! Starší žáci začali podávat kávu a zákusky. Prý to taková legrace není, ale vytrvají.",
+    img:
+      "https://res.cloudinary.com/dam7wdzvx/image/upload/v1765354669/svoucestou.info/news/kavarna1.webp",
+    url: "/news",
+  },
+  {
+    title: "Příroda pod peřinou",
+    subtite: "přednáška",
+    datum: "20.listopadu 2025",
+    text: "Zima v přírodě? To není jen ticho a spánek pod sněhovou přikrývkou! Užili jsme si přednášku v muzeu Mělník.",
+    img:
+      "https://res.cloudinary.com/dam7wdzvx/image/upload/v1765354669/svoucestou.info/news/muzeum.webp",
+    url: "/news",
+  },
+
 
   {
     title: "Jan Kršňák - Digiděti",
