@@ -8,6 +8,15 @@ export const newsData = [
   //     url: "/news",
   //   },https://res.cloudinary.com/dam7wdzvx/image/upload/v1746256962/svoucestou.info/news/mozaika1.webp
   {
+    title: "Vyšla hvězda nad Betlémem",
+    subtite: "divadlo",
+    datum: "16.prosince 2025",
+    text: "Školní žáci byli v Naratovicích na krásném vánočním představení divadla DRAK.",
+    img:
+      "https://res.cloudinary.com/dam7wdzvx/image/upload/v1765981614/svoucestou.info/drak.webp",
+    url: "/news",
+  },
+  {
     title: "školní kavárna",
     subtite: "káva",
     datum: "27.listopadu 2025",
