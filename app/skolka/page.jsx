@@ -117,9 +117,9 @@ export default function Skolka() {
             </p>
             <h3 className="textPodNadpis mb-4 mt-12">Cena</h3>
             <ul className="leading-relaxed  mb-4">
-              <li>
+              {/* <li>
                 sportovní pondělí
-              </li>
+              </li> */}
               <li>
                 učící úterý - čtvrtek
               </li>
