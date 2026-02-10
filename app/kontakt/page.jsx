@@ -1,9 +1,56 @@
 import Kontakt from "@/components/kontakt";
 import Image from "next/image";
 import React from "react";
+
+export const metadata = {
+  title: "Kontakt",
+  description:
+    "Kontaktujte Montessori školu a školku Svou Cestou. Adresa: Nebužely 3, mlýn Kroužek, 277 34 Nebužely. Telefon: 777 687 496, email: info@svoucestou.info",
+  openGraph: {
+    title: "Kontakt | Svou Cestou",
+    description:
+      "Kontaktujte Montessori školu a školku Svou Cestou. Adresa: Nebužely 3, mlýn Kroužek, 277 34 Nebužely. Telefon: 777 687 496, email: info@svoucestou.info",
+    url: "https://svoucestou.info/kontakt",
+  },
+  twitter: {
+    title: "Kontakt | Svou Cestou",
+    description:
+      "Kontaktujte Montessori školu a školku Svou Cestou. Adresa: Nebužely 3, mlýn Kroužek, 277 34 Nebužely. Telefon: 777 687 496, email: info@svoucestou.info",
+  },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://svoucestou.info/kontakt",
+  name: "Svou Cestou - Montessori škola a školka",
+  image: "https://svoucestou.info/svouCestou_logo.webp",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Nebužely 3, mlýn Kroužek",
+    addressLocality: "Nebužely",
+    postalCode: "277 34",
+    addressCountry: "CZ",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "50.4167",
+    longitude: "14.5667",
+  },
+  telephone: "+420777687496",
+  email: "info@svoucestou.info",
+  url: "https://svoucestou.info",
+  priceRange: "$$",
+};
+
 export default function KontaktPage() {
   return (
-    <section className="">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <section className="">
       <div className="container px-5 py-12 mx-auto flex flex-col">
         <div className="hidden md:block headingPage mb-4">
           <h1 className="textNadpis">Svou cestou</h1>
@@ -103,6 +150,7 @@ export default function KontaktPage() {
       <div className="hidden md:block">
         <Kontakt />
       </div>
-    </section>
+      </section>
+    </>
   );
 }

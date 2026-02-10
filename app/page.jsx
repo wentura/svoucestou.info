@@ -12,9 +12,41 @@ import Tym from "@/components/tym";
 import Usp from "@/components/usp";
 import Vice from "@/components/vice.jsx";
 import Image from "next/image";
+
+export const metadata = {
+  title: "Domů",
+  description:
+    "Montessori škola a školka v srdci CHKO Kokořínsko. Alternativní vzdělávání pro děti od 3 do 12+ let v historické budově mlýna Kroužek.",
+  openGraph: {
+    title: "Svou Cestou - Montessori škola a školka",
+    description:
+      "Montessori škola a školka v srdci CHKO Kokořínsko. Alternativní vzdělávání pro děti od 3 do 12+ let v historické budově mlýna Kroužek.",
+    url: "https://svoucestou.info",
+  },
+  twitter: {
+    title: "Svou Cestou - Montessori škola a školka",
+    description:
+      "Montessori škola a školka v srdci CHKO Kokořínsko. Alternativní vzdělávání pro děti od 3 do 12+ let v historické budově mlýna Kroužek.",
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Svou Cestou",
+  url: "https://svoucestou.info",
+  description:
+    "Montessori škola a školka v srdci CHKO Kokořínsko v historické budově mlýna Kroužek.",
+};
+
 export default function Home() {
   return (
-    <main className="text-lg">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <main className="text-lg">
       <Hero />
       <Features />
       <SkolaSkolka2 />
@@ -32,6 +64,7 @@ export default function Home() {
       <Tym />
       <Podpora />
       <Kontakt />
-    </main>
+      </main>
+    </>
   );
 }

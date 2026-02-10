@@ -49,6 +49,7 @@ export default function Tym() {
                         href={item.facebook}
                         className="text-gray-500"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -73,6 +74,7 @@ export default function Tym() {
                         href={item.instagram}
                         className="text-gray-500"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -95,6 +97,7 @@ export default function Tym() {
                         href={item.linkedin}
                         className="text-gray-500"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -119,6 +122,7 @@ export default function Tym() {
                         href={item.web}
                         className="text-gray-500"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

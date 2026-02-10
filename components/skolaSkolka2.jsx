@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { skolaSkolka2Data } from "./skolaSkolka2Data";
@@ -12,13 +13,16 @@ export default function SkolaSkolka2() {
               className="p-4 lg:w-1/3 hover:scale-105 transition duration-500 ease-in-out hover:drop-shadow-xl min-w-80 hover:rotate-2"
               key={index}
             >
-              <div
-                style={{
-                  backgroundImage: `url(${item.img})`,
-                }}
-                className={`bg-cover  bg-[#00000066] bg-blend-darken h-full px-12 py-16 rounded-lg overflow-hidden text-center relative`}
-              >
-                <div className="py-12">
+              <div className="bg-cover bg-[#00000066] bg-blend-darken h-full px-12 py-16 rounded-lg overflow-hidden text-center relative min-h-[300px]">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-cover -z-10"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-[#00000066] bg-blend-darken" />
+                <div className="relative z-10 py-12">
                   <h1 className="textNadpis text-4xl md:text-5xl xl:text-6xl font-bold text-monte-100">
                     {item.title}
                   </h1>

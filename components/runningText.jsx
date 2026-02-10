@@ -13,6 +13,7 @@ export default function RunningText() {
           <a
             href="https://www.facebook.com/svoucestoumontessori"
             target="_blank"
+            rel="noopener noreferrer"
             className="underline"
           >
             více informací na Facebooku.
@@ -24,6 +25,7 @@ export default function RunningText() {
           <a
             href="https://www.facebook.com/svoucestoumontessori"
             target="_blank"
+            rel="noopener noreferrer"
             className="underline"
           >
             více informací na Facebooku.
@@ -35,6 +37,7 @@ export default function RunningText() {
           <a
             href="https://www.facebook.com/svoucestoumontessori"
             target="_blank"
+            rel="noopener noreferrer"
             className="underline"
           >
             více informací na Facebooku.
@@ -46,6 +49,7 @@ export default function RunningText() {
           <a
             href="https://www.facebook.com/svoucestoumontessori"
             target="_blank"
+            rel="noopener noreferrer"
             className="underline"
           >
             více informací na Facebooku.
@@ -57,6 +61,7 @@ export default function RunningText() {
           <a
             href="https://www.facebook.com/svoucestoumontessori"
             target="_blank"
+            rel="noopener noreferrer"
             className="underline"
           >
             více informací na Facebooku.

@@ -1,5 +1,22 @@
-// import React from "react";
 import Image from "next/image";
+
+export const metadata = {
+  title: "Montessori vzdělávání",
+  description:
+    "Poznejte Montessori metodu vzdělávání - respektující přístup k rozvoji dítěte. Klíčové principy, historie a proč zvolit Montessori vzdělávání.",
+  openGraph: {
+    title: "Montessori vzdělávání | Svou Cestou",
+    description:
+      "Poznejte Montessori metodu vzdělávání - respektující přístup k rozvoji dítěte. Klíčové principy, historie a proč zvolit Montessori vzdělávání.",
+    url: "https://svoucestou.info/montessori",
+  },
+  twitter: {
+    title: "Montessori vzdělávání | Svou Cestou",
+    description:
+      "Poznejte Montessori metodu vzdělávání - respektující přístup k rozvoji dítěte. Klíčové principy, historie a proč zvolit Montessori vzdělávání.",
+  },
+};
+
 export default function Skolka() {
   return (
     <section className="">

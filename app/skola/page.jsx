@@ -1,5 +1,22 @@
-// import React from "react";
 import Image from "next/image";
+
+export const metadata = {
+  title: "Montessori škola",
+  description:
+    "Montessori škola pro děti od 5 do 12+ let. Kosmická výchova, velké příběhy a učení ve věkově smíšených skupinách v přírodě CHKO Kokořínsko.",
+  openGraph: {
+    title: "Montessori škola | Svou Cestou",
+    description:
+      "Montessori škola pro děti od 5 do 12+ let. Kosmická výchova, velké příběhy a učení ve věkově smíšených skupinách v přírodě CHKO Kokořínsko.",
+    url: "https://svoucestou.info/skola",
+  },
+  twitter: {
+    title: "Montessori škola | Svou Cestou",
+    description:
+      "Montessori škola pro děti od 5 do 12+ let. Kosmická výchova, velké příběhy a učení ve věkově smíšených skupinách v přírodě CHKO Kokořínsko.",
+  },
+};
+
 export default function Skola() {
   return (
     <section className="">
@@ -138,25 +155,20 @@ export default function Skola() {
               dětí, ale zároveň jim poskytoval dostatek volnosti pro vlastní
               objevování.
             </p>
-            <h3 className="textPodNadpis mb-4 mt-12">Harmonogram dne</h3>
+            
+            <h3 className="textPodNadpis mb-4 mt-12">Cena</h3>
             <ul className="leading-relaxed  mb-4">
               <li>
-                8<sup>30</sup> - 9<sup>00</sup>setkání se, volné hry
+                sportovní pondělí
               </li>
               <li>
-                9<sup>00</sup> - 12
-                <sup>00</sup> dopolední pracovní blok
+                učící úterý - čtvrtek
+              </li>
+              <li className="font-bold pt-4">
+                7000Kč měsíčně
               </li>
               <li>
-                12<sup>00</sup> - 12<sup>30</sup>
-                oběd
-              </li>
-              <li>
-                12
-                <sup>30</sup> - 16<sup>00</sup> odpolední práce / pobyt venku
-              </li>
-              <li>
-                16<sup>00</sup> odchod domů
+              (sourozenec 10% sleva)
               </li>
             </ul>
           </div>

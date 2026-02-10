@@ -1,5 +1,22 @@
-// import React from "react";
 import Image from "next/image";
+
+export const metadata = {
+  title: "Montessori školka",
+  description:
+    "Montessori školka pro děti od 3 do 6 let. Objevování světa rukama a srdcem v přírodním prostředí CHKO Kokořínsko.",
+  openGraph: {
+    title: "Montessori školka | Svou Cestou",
+    description:
+      "Montessori školka pro děti od 3 do 6 let. Objevování světa rukama a srdcem v přírodním prostředí CHKO Kokořínsko.",
+    url: "https://svoucestou.info/skolka",
+  },
+  twitter: {
+    title: "Montessori školka | Svou Cestou",
+    description:
+      "Montessori školka pro děti od 3 do 6 let. Objevování světa rukama a srdcem v přírodním prostředí CHKO Kokořínsko.",
+  },
+};
+
 export default function Skolka() {
   return (
     <section className="">
@@ -98,34 +115,19 @@ export default function Skolka() {
               práci, zkoumání a objevování, a to jak uvnitř, tak venku v
               přírodě.
             </p>
-            <h3 className="textPodNadpis mb-4 mt-12">
-              Každý den objevujeme a učíme se
-            </h3>
+            <h3 className="textPodNadpis mb-4 mt-12">Cena</h3>
             <ul className="leading-relaxed  mb-4">
               <li>
-                8<sup>30</sup> - 9<sup>00</sup> začátek
+                sportovní pondělí
               </li>
               <li>
-                9<sup>00</sup> - 12
-                <sup>00</sup> dopolední pracovní blok průbežně dopoledne svačina
+                učící úterý - čtvrtek
+              </li>
+              <li className="font-bold pt-4">
+                7000Kč měsíčně
               </li>
               <li>
-                10<sup>00</sup> elipsa
-              </li>
-              <li>
-                12<sup>00</sup> - 12<sup>30</sup>
-                oběd
-              </li>
-              <li>
-                12<sup>30</sup> - 13<sup>00</sup> odpočinek / spánek
-              </li>
-              <li>
-                13
-                <sup>30</sup> - 16<sup>00</sup> odpolední práce / pobyt venku
-                průběžně venku svačina
-              </li>
-              <li>
-                16<sup>00</sup> odchod domů
+              (sourozenec 10% sleva)
               </li>
             </ul>
           </div>

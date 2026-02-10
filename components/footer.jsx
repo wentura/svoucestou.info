@@ -107,6 +107,7 @@ export default function Footer() {
               href="https://www.zbyneksvoboda.cz"
               className="ml-1 text-gray-200 underline underline-offset-2 decoration-gray-400"
               target="_blank"
+              rel="noopener noreferrer"
             >
               vytvořil Zbynek Svoboda
             </a>
@@ -118,8 +119,9 @@ export default function Footer() {
                 key={index}
                 href={item.link}
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                <img src={item.icon} alt={item.title} className="w-6 h-6" />
+                <Image src={item.icon} alt={item.title} width={24} height={24} />
                 {/* {item.title} */}
               </a>
             ))}

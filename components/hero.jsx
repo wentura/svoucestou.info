@@ -1,15 +1,19 @@
-// import React from "react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div
-      className="hero min-h-[250px] lg:min-h-[700px] flex items-center justify-center bg-centerbg-no-repeat bg-cover bg-[url(https://res.cloudinary.com/dam7wdzvx/image/upload/v1732404552/svoucestou.info/hero.webp)] bg-[#00000044] bg-blend-darken rounded-xl"
-      // style={{
-      //   backgroundImage:
-      //     "url(https://res.cloudinary.com/dam7wdzvx/image/upload/v1732404552/svoucestou.info/hero.webp)",
-      // }}
-    >
-      <div className="p-12 bg-opacity-40 rounded-3xl align-bottom mt-44 lg:mt-96">
+    <div className="hero min-h-[250px] lg:min-h-[700px] flex items-center justify-center relative rounded-xl overflow-hidden">
+      <Image
+        src="https://res.cloudinary.com/dam7wdzvx/image/upload/v1732404552/svoucestou.info/hero.webp"
+        alt="Montessori škola a školka v přírodě"
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
+        quality={90}
+      />
+      <div className="absolute inset-0 bg-[#00000044] bg-blend-darken" />
+      <div className="relative z-10 p-12 bg-opacity-40 rounded-3xl align-bottom mt-44 lg:mt-96">
         <div className="flex flex-col bg-black/10 p-4 rounded-lg backdrop-blur-sm">
           <h1 className=" textNadpis lg:text-8xl text-monte-100 pb-8">
             Montessori školka a škola
@@ -19,7 +23,6 @@ export default function Hero() {
             důvěrou, že život je cesta plná možností.
           </p>
         </div>
-        
       </div>
     </div>
     // <section className="text-gray-600 body-font">

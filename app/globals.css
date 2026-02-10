@@ -15,18 +15,12 @@
     @apply text-center;
   }
   .lobster {
-    /* font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal; */
-    font-family: "Yeseva One", serif;
+    font-family: var(--font-yeseva-one), serif;
     font-weight: 400;
     font-style: normal;
   }
   .textNadpis {
-    /* font-family: "Lobster", sans-serif;
-    font-weight: 400;
-    font-style: normal; */
-    font-family: "Yeseva One", serif;
+    font-family: var(--font-yeseva-one), serif;
     font-weight: 400;
     font-style: normal;
     @apply text-monte-100 text-2xl lg:text-5xl xl:text-7xl font-extrabold;

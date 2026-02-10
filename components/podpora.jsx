@@ -32,7 +32,12 @@ export default function Podpora() {
           <div className="flex flex-wrap list-none -mb-1">
             {PodporaData.map((item, index) => (
               <div className="2xl:w-1/3 md:w-1/2 my-4 px-4" key={index}>
-                <a href={item.url} className="flex flex-col">
+                <a
+                  href={item.url}
+                  className="flex flex-col"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="">{item.name}</div>
                   <div className="text-sm">{item.subname}</div>
                 </a>

@@ -4,6 +4,23 @@ import Link from "next/link";
 import React from "react";
 import AutoPlayVideo from "@/components/AutoPlayVideo";
 
+export const metadata = {
+  title: "Novinky a aktuality",
+  description:
+    "Aktuality a novinky z Montessori školy a školky Svou Cestou. Sledujte naše události, akce a dění ve škole.",
+  openGraph: {
+    title: "Novinky a aktuality | Svou Cestou",
+    description:
+      "Aktuality a novinky z Montessori školy a školky Svou Cestou. Sledujte naše události, akce a dění ve škole.",
+    url: "https://svoucestou.info/novinky",
+  },
+  twitter: {
+    title: "Novinky a aktuality | Svou Cestou",
+    description:
+      "Aktuality a novinky z Montessori školy a školky Svou Cestou. Sledujte naše události, akce a dění ve škole.",
+  },
+};
+
 export default function ShortNews() {
   return (
     <section>
