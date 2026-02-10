@@ -18,11 +18,11 @@ export default function SkolaSkolka2() {
                   src={item.img}
                   alt={item.title}
                   fill
-                  className="object-cover -z-10"
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-[#00000066] bg-blend-darken" />
-                <div className="relative z-10 py-12">
+                <div className="relative z-20 py-12">
                   <h1 className="textNadpis text-4xl md:text-5xl xl:text-6xl font-bold text-monte-100">
                     {item.title}
                   </h1>
