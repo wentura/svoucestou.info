@@ -1,22 +1,20 @@
-import Cta from "@/components/cta";
 import Features from "@/components/features";
-import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Kontakt from "@/components/kontakt";
-import Mlyn from "@/components/mlyn";
-import PlanDne from "@/components/plan-dne";
-import Podpora from "@/components/podpora";
 import ShortNews from "@/components/shortNews.jsx";
 import SkolaSkolka2 from "@/components/skolaSkolka2";
+import Podpora from "@/components/podpora";
+import TrustSection from "@/components/trust-section";
 import Tym from "@/components/tym";
 import Usp from "@/components/usp";
-import Vice from "@/components/vice.jsx";
-import Image from "next/image";
 
 export const metadata = {
   title: "Domů",
   description:
     "Montessori škola a školka v srdci CHKO Kokořínsko. Alternativní vzdělávání pro děti od 3 do 12+ let v historické budově mlýna Kroužek.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Svou Cestou - Montessori škola a školka",
     description:
@@ -46,7 +44,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
-      <main className="text-lg">
+      <main>
       <Hero />
       <Features />
       <SkolaSkolka2 />
@@ -59,8 +57,7 @@ export default function Home() {
         link={"/"}
 				/> */}
       <Usp />
-      {/* <Mlyn /> */}
-      {/* <PlanDne /> */}
+      <TrustSection />
       <Tym />
       <Podpora />
       <Kontakt />

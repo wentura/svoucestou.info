@@ -181,7 +181,7 @@ export default function Tym() {
             >
               <Image
                 alt="team"
-                className={`flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0 `}
+                className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 rounded-lg sm:mb-0 "
                 src="/person.png"
                 width={200}
                 height={200}
@@ -194,8 +194,8 @@ export default function Tym() {
                   jako průvodce
                 </h3>
                 <Link
-                  href="/kontakt"
-                  className="mt-4 font-bold text-monte-100 underline underline-offset-2"
+                  href="/kontakt#dotaz"
+                  className="mt-4 font-bold text-monte-100 underline underline-offset-2 inline-block"
                 >
                   kontaktujte nás
                 </Link>

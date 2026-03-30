@@ -4,6 +4,9 @@ export const metadata = {
   title: "Montessori školka",
   description:
     "Montessori školka pro děti od 3 do 6 let. Objevování světa rukama a srdcem v přírodním prostředí CHKO Kokořínsko.",
+  alternates: {
+    canonical: "/skolka",
+  },
   openGraph: {
     title: "Montessori školka | Svou Cestou",
     description:
@@ -36,7 +39,7 @@ export default function Skolka() {
         <div className="flex flex-col sm:flex-row mt-10">
           <div className="sm:w-1/2 sm:pr-8 sm:py-8">
             <h3 className="textPodNadpis mb-4">Pro děti od 3 do 6 let</h3>
-            <p className="leading-relaxed text-base mb-4">
+            <p className="leading-relaxed mb-4">
               V naší Montessori školce děti objevují svět prostřednictvím
               doteku, smyslů a vlastní zkušenosti. V tomto klíčovém období děti
               zkoumají nejen rukama, ale i myslí, rozvíjejí vztahy s ostatními,
@@ -44,8 +47,10 @@ export default function Skolka() {
               umožňuje dětem volit si aktivity, které je v daném okamžiku
               zajímají, a rozvíjet se vlastním tempem.
             </p>
-            <h3 className="textPodNadpis mb-4 mt-12">Pro děti od 3 do 6 let</h3>
-            <ul className="list-none seznamSkola text-base">
+            <h3 className="textPodNadpis mb-4 mt-12">
+              Klíčové oblasti rozvoje v tomto věku
+            </h3>
+            <ul className="list-none seznamSkola">
               <li>
                 <span className="font-bold">Ruka je nástroj ducha:</span> Děti
                 pomocí rukou zkoumají svět – psaní, kreslení, hmatové zkoumání a

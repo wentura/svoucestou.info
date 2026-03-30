@@ -3,17 +3,20 @@ import Image from "next/image";
 export const metadata = {
   title: "Montessori škola",
   description:
-    "Montessori škola pro děti od 5 do 12+ let. Kosmická výchova, velké příběhy a učení ve věkově smíšených skupinách v přírodě CHKO Kokořínsko.",
+    "Montessori škola a výuková skupina pro děti na domácím vzdělávání (5–12+ let). Kosmická výchova, velké příběhy, smíšené skupiny. CHKO Kokořínsko, mlýn Kroužek.",
+  alternates: {
+    canonical: "/skola",
+  },
   openGraph: {
     title: "Montessori škola | Svou Cestou",
     description:
-      "Montessori škola pro děti od 5 do 12+ let. Kosmická výchova, velké příběhy a učení ve věkově smíšených skupinách v přírodě CHKO Kokořínsko.",
+      "Montessori škola a výuková skupina pro děti na domácím vzdělávání (5–12+ let). Kosmická výchova, velké příběhy, smíšené skupiny. CHKO Kokořínsko.",
     url: "https://svoucestou.info/skola",
   },
   twitter: {
     title: "Montessori škola | Svou Cestou",
     description:
-      "Montessori škola pro děti od 5 do 12+ let. Kosmická výchova, velké příběhy a učení ve věkově smíšených skupinách v přírodě CHKO Kokořínsko.",
+      "Montessori škola a výuková skupina pro děti na domácím vzdělávání (5–12+ let). Kosmická výchova, velké příběhy, smíšené skupiny. CHKO Kokořínsko.",
   },
 };
 
@@ -35,7 +38,7 @@ export default function Skola() {
         <div className="flex flex-col sm:flex-row mt-10">
           <div className="sm:w-1/2 sm:pr-8 sm:py-8">
             <h3 className="textPodNadpis mb-4">Pro děti od 5 do 12+ let</h3>
-            <p className="leading-relaxed text-base mb-4">
+            <p className="leading-relaxed mb-4">
               V naší Montessori škole děti rostou nejen vědomostmi, ale i
               duchem. Jsme výuková skupina, která podporuje děti zapsané na
               domácím vzdělávání, aby se mohly socializovat, rozvíjet
@@ -44,7 +47,7 @@ export default function Skola() {
               tom, že dětem pomáháme rozvíjet jejich vnitřní touhu po poznání a
               sebedůvěru.
             </p>
-            <p className="leading-relaxed text-base mb-4">
+            <p className="leading-relaxed mb-4">
               Naším cílem je spoluvytvářet prostor, který respektuje dětské
               potřeby, nabízí odpovědi na jejich otázky a zároveň podporuje
               jejich osobní růst. Jsme tu jako průvodci, abychom dětem pomohli
@@ -53,14 +56,14 @@ export default function Skola() {
             <h3 className="textPodNadpis mb-4 mt-12">
               Kosmická výchova – Poznávání světa v souvislostech
             </h3>
-            <p className="leading-relaxed text-base mb-4">
+            <p className="leading-relaxed mb-4">
               Vzdělávání ve věku od 6 do 9 let, známé jako kosmická výchova, je
               postavené na tom, že děti se učí poznávat svět jako celek. Maria
               Montessori věřila, že je důležité učit děti nejen fakta, ale také
               pochopení souvislostí. Kosmos není jen o vědě a přírodě, ale také
               o vztazích mezi lidmi, přírodou a celým světem.
             </p>
-            <p className="leading-relaxed text-base mb-4">
+            <p className="leading-relaxed mb-4">
               V tomto věku děti milují příběhy, proto je základem našeho
               přístupu vyprávění velkých příběhů, které děti vedou k hlubšímu
               pochopení světa.
@@ -68,7 +71,7 @@ export default function Skola() {
             <h3 className="textPodNadpis mb-4 mt-12">
               Velké příběhy – Učení prostřednictvím příběhů
             </h3>
-            <p className="leading-relaxed text-base mb-4">
+            <p className="leading-relaxed mb-4">
               Na začátku každého školního roku představujeme dětem 5 (resp. 6)
               velkých příběhů, které jim pomáhají chápat základní principy světa
               kolem nás:
@@ -153,7 +156,28 @@ export default function Skola() {
             <p className="leading-relaxed  mb-4">
               Náš den je pečlivě strukturován, aby respektoval přirozené rytmy
               dětí, ale zároveň jim poskytoval dostatek volnosti pro vlastní
-              objevování.
+              objevování. Orientační struktura (časy se mohou mírně měnit podle
+              ročního období a akcí):
+            </p>
+            <ul className="list-disc pl-5 mb-4 space-y-1 text-gray-700">
+              <li>
+                <strong>8:00–8:30</strong> — příchod, klidná příprava na den
+              </li>
+              <li>
+                <strong>8:30–12:00</strong> — pracovní blok (Montessori
+                aktivity, projekty, individuální práce; část uvnitř / venku)
+              </li>
+              <li>
+                <strong>12:00–13:00</strong> — oběd a odpočinek
+              </li>
+              <li>
+                <strong>odpoledne</strong> — pokračování práce, výpravy,
+                případně specializované aktivity podle domluvy
+              </li>
+            </ul>
+            <p className="leading-relaxed text-sm text-gray-600 mb-4">
+              Aktuální týdenní plán vám rádi upřesníme na osobní schůzce nebo
+              e-mailem.
             </p>
             
             <h3 className="textPodNadpis mb-4 mt-12">Cena</h3>

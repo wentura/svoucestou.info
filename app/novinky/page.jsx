@@ -8,6 +8,9 @@ export const metadata = {
   title: "Novinky a aktuality",
   description:
     "Aktuality a novinky z Montessori školy a školky Svou Cestou. Sledujte naše události, akce a dění ve škole.",
+  alternates: {
+    canonical: "/novinky",
+  },
   openGraph: {
     title: "Novinky a aktuality | Svou Cestou",
     description:

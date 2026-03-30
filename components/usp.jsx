@@ -22,7 +22,7 @@ export default function Usp() {
                   </h2>
                 </div>
                 <div className="flex-grow">
-                  <p className="text-base leading-relaxed">{item.text}</p>
+                  <p className="leading-relaxed">{item.text}</p>
                   {/* <a className="inline-flex items-center mt-3 text-indigo-500">
                     Learn More
                     <svg

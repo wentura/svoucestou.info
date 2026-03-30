@@ -4,6 +4,9 @@ export const metadata = {
   title: "Montessori vzdělávání",
   description:
     "Poznejte Montessori metodu vzdělávání - respektující přístup k rozvoji dítěte. Klíčové principy, historie a proč zvolit Montessori vzdělávání.",
+  alternates: {
+    canonical: "/montessori",
+  },
   openGraph: {
     title: "Montessori vzdělávání | Svou Cestou",
     description:
@@ -83,7 +86,7 @@ export default function Skolka() {
               jsou přirozeně zvídavé a mají touhu učit se. Montessori metoda se
               zaměřuje na podporu dítěte v těchto oblastech:
             </p>
-            <ul className="list-none seznamSkola text-base">
+            <ul className="list-none seznamSkola">
               <li>
                 <span className="font-bold">Intelektuální rozvoj:</span> Pomocí
                 praktických pomůcek a zkušeností se děti učí chápat složité
@@ -213,13 +216,13 @@ export default function Skolka() {
             <h3 className="textPodNadpis mb-4">
               Proč zvolit Montessori vzdělávání?
             </h3>
-            <p className="leading-relaxed text-base mb-4">
+            <p className="leading-relaxed mb-4">
               Montessori vzdělávání je jedinečné tím, že klade důraz na
               individualitu dítěte, jeho samostatnost a schopnost učit se
               prostřednictvím vlastních zkušeností. Děti, které absolvují
               Montessori školy, jsou často:
             </p>
-            <ul className="list-disc list-inside pl-2 seznamSkola text-base">
+            <ul className="list-disc list-inside pl-2 seznamSkola">
               <li>Sebevědomé a zodpovědné,</li>
               <li>Schopné řešit problémy a spolupracovat,</li>
               <li>Přirozeně zvídavé a motivované k učení.</li>

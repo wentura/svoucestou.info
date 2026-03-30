@@ -1,7 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
 import Matomo from "./Matomo";
-import { navigationData } from "./navigationData";
 import { sockyData } from "./sockyData";
 export default function Footer() {
   return (

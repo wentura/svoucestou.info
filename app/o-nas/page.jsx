@@ -6,6 +6,9 @@ export const metadata = {
   title: "O nás",
   description:
     "Poznejte příběh Montessori školy a školky Svou Cestou. Naše historie, hodnoty a cesta k respektujícímu vzdělávání v přírodě CHKO Kokořínsko.",
+  alternates: {
+    canonical: "/o-nas",
+  },
   openGraph: {
     title: "O nás | Svou Cestou",
     description:

@@ -14,6 +14,11 @@ export const navigationData = [
     href: "/skola",
     icon: "skola",
   },
+  {
+    title: "Ceník",
+    href: "/cenik",
+    icon: "cenik",
+  },
   // {
   // 	title: "Škola 12+",
   // 	href: "/skola12",

@@ -1,7 +1,7 @@
 export const PodporaData = [
   {
     name: "Zbyněk Svoboda",
-    subname: "Tvůrce webů a webových aplikací",
+    subname: "Digitální stratég a konzultant",
     logo: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1726500854/svoucestou.info/old/alza_czpng.webp",
     url: "https://www.zbyneksvoboda.cz/",
   },

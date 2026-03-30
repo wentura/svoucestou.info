@@ -28,12 +28,12 @@ export default function SkolaSkolka() {
                 </span>
               </h2>
               <p
-                className="pb-6 text-base leading-relaxed group-hover:font-extrabold sm:group-hover:text-2xl md:group-hover:scale-115 transition duration-300 ease-in-out
+                className="pb-6 leading-relaxed group-hover:font-extrabold sm:group-hover:text-2xl md:group-hover:scale-115 transition duration-300 ease-in-out
 							sm:group-hover:-translate-y-6 sm:group-hover:translate-x-24 group-hover:text-monte-100 sm:group-hover:rotate-6 md:group-hover:-translate-y-6 md:group-hover:translate-x-64 lg:group-hover:-translate-y-6 lg:group-hover:translate-x-96 xl:group-hover:-translate-y-12 xl:group-hover:translate-x-2 2xl:group-hover:-translate-y-8 2xl:group-hover:translate-x-32"
               >
                 „Pomoz mi, abych to dokázal sám.“
               </p>
-              <p className="text-base leading-relaxed">
+              <p className="leading-relaxed">
                 V naší školce děti objevují svět svým vlastním tempem. Naším
                 cílem je podporovat jejich přirozenou touhu učit se a rozvíjet
                 se prostřednictvím speciálně připraveného prostředí, kde si
@@ -133,7 +133,7 @@ export default function SkolaSkolka() {
               <h2 className="mb-2 text-lg font-medium text-gray-900 title-font">
                 Neptune
               </h2>
-              <p className="text-base leading-relaxed">
+              <p className="leading-relaxed">
                 Blue bottle crucifix vinyl post-ironic four dollar toast vegan
                 taxidermy. Gastropub indxgo juice poutine, ramps microdosing
                 banh mi pug VHS try-hard ugh iceland kickstarter tumblr

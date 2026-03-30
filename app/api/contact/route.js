@@ -1,0 +1,128 @@
+import { Resend } from "resend";
+import { interestLabel } from "@/lib/contact-interest";
+import { allowContactSubmit } from "@/lib/contact-rate-limit";
+
+const MAX_LEN = {
+  name: 200,
+  email: 320,
+  childAge: 200,
+  message: 8000,
+};
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function isValidEmail(s) {
+  return typeof s === "string" && s.length <= MAX_LEN.email && EMAIL_RE.test(s.trim());
+}
+
+function getClientIp(request) {
+  const forwarded = request.headers.get("x-forwarded-for");
+  if (forwarded) {
+    return forwarded.split(",")[0].trim();
+  }
+  return request.headers.get("x-real-ip") || "unknown";
+}
+
+/** Srozumitelná hláška pro UI (Resend sandbox / ověření domény). */
+function messageFromResendError(error) {
+  const msg = typeof error?.message === "string" ? error.message : "";
+  if (
+    error?.name === "validation_error" ||
+    msg.includes("testing emails") ||
+    msg.includes("verify a domain")
+  ) {
+    return (
+      "Resend je v testovacím režimu: příjemce musí být e-mail vašeho Resend účtu. " +
+      "Do .env.local nastavte CONTACT_TO_EMAIL na tuto adresu, nebo na resend.com/domains ověřte doménu a použijte odesílatele z ní."
+    );
+  }
+  return "Odeslání se nepovedlo. Zkuste to prosím později.";
+}
+
+export async function POST(request) {
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return Response.json({ error: "Neplatná data." }, { status: 400 });
+  }
+
+  const { name, email, childAge, interest, message, website } = body;
+
+  if (typeof website === "string" && website.trim() !== "") {
+    return Response.json({ ok: true }, { status: 200 });
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return Response.json(
+      { error: "E-mail není na serveru nakonfigurován." },
+      { status: 503 }
+    );
+  }
+
+  const ip = getClientIp(request);
+  if (!allowContactSubmit(ip)) {
+    return Response.json(
+      { error: "Příliš mnoho odeslání. Zkuste to znovu za chvíli." },
+      { status: 429 }
+    );
+  }
+
+  if (typeof name !== "string" || name.trim().length < 1) {
+    return Response.json({ error: "Vyplňte jméno." }, { status: 400 });
+  }
+  if (!isValidEmail(email)) {
+    return Response.json({ error: "Vyplňte platný e-mail." }, { status: 400 });
+  }
+  if (
+    typeof interest !== "string" ||
+    !["skolka", "skola", "oboji"].includes(interest)
+  ) {
+    return Response.json({ error: "Vyberte školku nebo školu." }, { status: 400 });
+  }
+  if (typeof message !== "string") {
+    return Response.json({ error: "Chybí zpráva." }, { status: 400 });
+  }
+
+  const safeName = name.trim().slice(0, MAX_LEN.name);
+  const safeEmail = email.trim().toLowerCase();
+  const safeChildAge =
+    typeof childAge === "string" ? childAge.trim().slice(0, MAX_LEN.childAge) : "";
+  const safeMessage = message.trim().slice(0, MAX_LEN.message);
+
+  const to =
+    process.env.CONTACT_TO_EMAIL?.trim() || "info@zbyneksvoboda.cz";
+  const from =
+    process.env.RESEND_FROM?.trim() ||
+    "Svou Cestou <onboarding@resend.dev>";
+
+  const subject = `Dotaz Svou Cestou — ${interestLabel(interest)}`;
+  const text = [
+    `Jméno: ${safeName}`,
+    `E-mail: ${safeEmail}`,
+    `Věk dítěte / ročník: ${safeChildAge || "-"}`,
+    `Zájem: ${interestLabel(interest)}`,
+    "",
+    safeMessage || "(bez textu zprávy)",
+  ].join("\n");
+
+  const resend = new Resend(apiKey);
+  const { error } = await resend.emails.send({
+    from,
+    to: [to],
+    replyTo: safeEmail,
+    subject,
+    text,
+  });
+
+  if (error) {
+    console.error("Resend error:", error);
+    return Response.json(
+      { error: messageFromResendError(error) },
+      { status: 502 }
+    );
+  }
+
+  return Response.json({ ok: true });
+}

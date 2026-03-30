@@ -41,15 +41,6 @@ export const metadata = {
   },
   description:
     "Montessori škola a školka v srdci CHKO Kokořínsko v historické budově mlýna Kroužek.",
-  keywords: [
-    "montessori",
-    "škola",
-    "školka",
-    "Kokořínsko",
-    "alternativní vzdělávání",
-    "domácí vzdělávání",
-    "mlýn Kroužek",
-  ],
   authors: [{ name: "Svou Cestou" }],
   openGraph: {
     type: "website",
@@ -121,7 +112,7 @@ const organizationSchema = {
 export default function RootLayout({ children }) {
   return (
     <html lang="cs" className={`${josefinSans.variable} ${openSans.variable} ${playfairDisplay.variable} ${yesevaOne.variable}`}>
-      <body className="josefin-200 text-gray-700 max-w-4xl mx-auto">
+      <body className="josefin-400 text-base md:text-lg leading-relaxed text-gray-700 max-w-4xl mx-auto antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

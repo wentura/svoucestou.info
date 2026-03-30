@@ -1,4 +1,4 @@
-// import React from "react";
+import Link from "next/link";
 
 export default function Kontakt() {
   return (
@@ -12,7 +12,7 @@ export default function Kontakt() {
           marginWidth={0}
           title="map"
           scrolling="no"
-          src="https://maps.google.com/maps?width=100%&height=600&hl=cz&q=%C4%B0Nebuzely+3+(Svou%20Cestou)&ie=UTF8&t=&z=13&iwloc=B&output=embed"
+          src="https://maps.google.com/maps?width=100%&height=600&hl=cz&q=Nebuzely+3+ml%C3%BDn+Krou%C5%BEek+(Svou+Cestou)&ie=UTF8&t=&z=13&iwloc=B&output=embed"
           // src="https://maps.google.com/maps?width=100%&height=600&hl=cz&q=%C4%B0Nebuzely+3+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
           // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27046.69039827414!2d14.56043130251515!3d50.40239049783139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470be198b4700cb3%3A0x2c58ca874da341c7!2sSvou%20cestou!5e1!3m2!1scs!2scz!4v1729627813623!5m2!1scs!2scz"
           // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27046.690398274135!2d14.56043130251515!3d50.40239049783139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470be198b4700cb3%3A0x2c58ca874da341c7!2sSvou%20cestou!5e1!3m2!1scs!2scz!4v1729628006515!5m2!1scs!2scz"
@@ -45,6 +45,15 @@ export default function Kontakt() {
             mlýn Kroužek
             <br />
             Nebužely 3, 277 34, Nebužely
+          </p>
+          <p className="text-sm text-gray-600 border-t border-gray-200 pt-4">
+            <Link
+              href="/kontakt#dotaz"
+              className="font-medium text-monte-100 underline underline-offset-2"
+            >
+              Kontaktní formulář a další údaje
+            </Link>{" "}
+            — stránka Kontakt.
           </p>
         </div>
       </div>

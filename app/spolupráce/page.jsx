@@ -2,6 +2,9 @@ export const metadata = {
   title: "Spolupráce",
   description:
     "Možnosti spolupráce s Montessori školou a školkou Svou Cestou. Podpora, partneři a způsoby, jak se zapojit.",
+  alternates: {
+    canonical: "/spolupráce",
+  },
   openGraph: {
     title: "Spolupráce | Svou Cestou",
     description:
