@@ -124,7 +124,7 @@ export default function Skolka() {
                 učící úterý - čtvrtek
               </li>
               <li className="font-bold pt-4">
-                7000Kč měsíčně
+                6000Kč měsíčně
               </li>
               <li>
               (sourozenec 10% sleva)

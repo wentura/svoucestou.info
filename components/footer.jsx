@@ -102,7 +102,7 @@ export default function Footer() {
       <div className="bg-monte-200 pt-12 pb-12">
         <div className="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
           <p className="text-sm text-center text-gray-200 sm:text-left">
-            2017 - 2025 - Svou cestou - Montessori guru z.s. ,{" "}
+            2017 - {new Date().getFullYear()} - Svou cestou - Montessori guru z.s. ,{" "}
             <a
               href="https://www.zbyneksvoboda.cz"
               className="ml-1 text-gray-200 underline underline-offset-2 decoration-gray-400"
