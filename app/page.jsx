@@ -9,7 +9,7 @@ import Tym from "@/components/tym";
 import Usp from "@/components/usp";
 
 export const metadata = {
-  title: "Domů",
+  // title: "Domů",
   description:
     "Montessori škola a školka v srdci CHKO Kokořínsko. Alternativní vzdělávání pro děti od 3 do 12+ let v historické budově mlýna Kroužek.",
   alternates: {
