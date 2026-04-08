@@ -189,7 +189,7 @@ export default function Skola() {
                 učící úterý - čtvrtek
               </li>
               <li className="font-bold pt-4">
-                6000Kč měsíčně
+                6500Kč měsíčně
               </li>
               <li>
               (sourozenec 10% sleva)
