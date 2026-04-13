@@ -7,6 +7,34 @@ export const newsData = [
   //     img: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399715/svoucestou.info/433280086_957915323004435_780922250576987527_n.webp",
   //     url: "/news",
   //   },https://res.cloudinary.com/dam7wdzvx/image/upload/v1746256962/svoucestou.info/news/mozaika1.webp
+  
+  {
+    title: "Rodina a tradice",
+    subtite: "muzeum",
+    datum: "25.března 2026",
+    text: "Navštívily nás odbornice z Regionálního muzea Mělník v rámci tématu rodiny, jejích zvyků a tradic. Program prohloubil porozumění proměnám rodinného života v čase a podpořil vnímání vlastních kořenů i kulturní identity.",
+    img:
+      "https://res.cloudinary.com/dam7wdzvx/image/upload/v1776105098/svoucestou.info/news/reg_muzeum_26.webp",
+    url: "/news",
+  },
+  {
+    title: "Rediscover Montessori",
+    subtite: "konference",
+    datum: "13.-15. března 2026",
+    text: "Zúčastnili jsme se konference Rediscover Montessori v Brně, zaměřené na propojení současných poznatků s principy vzdělávání dle Marii a Maria Montessori.",
+    img:
+      "https://res.cloudinary.com/dam7wdzvx/image/upload/v1776105098/svoucestou.info/news/rediscover_conf_brno_2026.webp",
+    url: "/news",
+  },
+  {
+    title: "Jeden svět",
+    subtite: "festival",
+    datum: "12. března 2026",
+    text: "Děti se zúčastnily festivalu Jeden svět. Prostřednictvím filmu se děti seznámily s aktuálními tématy světa a rozvíjely schopnost vnímat různé perspektivy i vlastní názor.",
+    img:
+      "https://res.cloudinary.com/dam7wdzvx/image/upload/v1776105098/svoucestou.info/news/Jeden_svet.webp",
+    url: "/news",
+  },
   {
     title: "školní kavárna",
     subtite: "káva",
