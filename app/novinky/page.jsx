@@ -33,7 +33,7 @@ export default function ShortNews() {
             <h1 className="textNadpis">Aktuality a novinky</h1>
           </div>
         </div>
-        <div className="flex flex-wrap w-full mb-20">dsadasdasdasd</div>
+        
         <div className="flex flex-wrap -m-4">
           {newsData.map((item, index) => (
             <div className={`xl:w-1/4 md:w-1/2 p-4 `} key={index}>
