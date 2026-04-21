@@ -7,6 +7,7 @@ import Podpora from "@/components/podpora";
 import TrustSection from "@/components/trust-section";
 import Tym from "@/components/tym";
 import Usp from "@/components/usp";
+import { SITE } from "@/lib/site-config";
 
 export const metadata = {
   // title: "Domů",
@@ -19,7 +20,7 @@ export const metadata = {
     title: "Svou Cestou - Montessori škola a školka",
     description:
       "Montessori škola a školka v srdci CHKO Kokořínsko. Alternativní vzdělávání pro děti od 3 do 12+ let v historické budově mlýna Kroužek.",
-    url: "https://svoucestou.info",
+    url: SITE.canonicalOrigin,
   },
   twitter: {
     title: "Svou Cestou - Montessori škola a školka",
@@ -32,7 +33,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Svou Cestou",
-  url: "https://svoucestou.info",
+  url: SITE.canonicalOrigin,
   description:
     "Montessori škola a školka v srdci CHKO Kokořínsko v historické budově mlýna Kroužek.",
 };

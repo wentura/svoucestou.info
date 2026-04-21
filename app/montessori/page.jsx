@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SITE } from "@/lib/site-config";
 
 export const metadata = {
   title: "Montessori vzdělávání",
@@ -11,7 +12,7 @@ export const metadata = {
     title: "Montessori vzdělávání | Svou Cestou",
     description:
       "Poznejte Montessori metodu vzdělávání - respektující přístup k rozvoji dítěte. Klíčové principy, historie a proč zvolit Montessori vzdělávání.",
-    url: "https://svoucestou.info/montessori",
+    url: `${SITE.canonicalOrigin}/montessori`,
   },
   twitter: {
     title: "Montessori vzdělávání | Svou Cestou",

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PRICING, SITE, formatCzk } from "@/lib/site-config";
 
 export const metadata = {
   title: "Montessori škola",
@@ -11,7 +12,7 @@ export const metadata = {
     title: "Montessori škola | Svou Cestou",
     description:
       "Montessori škola a výuková skupina pro děti na domácím vzdělávání (5–12+ let). Kosmická výchova, velké příběhy, smíšené skupiny. CHKO Kokořínsko.",
-    url: "https://svoucestou.info/skola",
+    url: `${SITE.canonicalOrigin}/skola`,
   },
   twitter: {
     title: "Montessori škola | Svou Cestou",
@@ -120,7 +121,8 @@ export default function Skola() {
               height={600}
               width={600}
               alt="content"
-              className="rounded-xl drop-shadow-xl  mx-auto w-auto h-auto"
+              className="rounded-xl drop-shadow-xl  mx-auto"
+              style={{ width: "auto", height: "auto" }}
               src="/skala.webp"
             />
             <div className="py-2 text-lg font-bold">
@@ -189,10 +191,10 @@ export default function Skola() {
                 učící úterý - čtvrtek
               </li>
               <li className="font-bold pt-4">
-                6500Kč měsíčně
+                {formatCzk(PRICING.monthlyTuitionCzk)} měsíčně
               </li>
               <li>
-              (sourozenec 10% sleva)
+                (sourozenec {PRICING.siblingDiscountPercent}% sleva)
               </li>
             </ul>
           </div>
@@ -201,7 +203,8 @@ export default function Skola() {
               height={600}
               width={600}
               alt="content"
-              className="rounded-xl drop-shadow-xl mx-auto w-auto h-auto"
+              className="rounded-xl drop-shadow-xl mx-auto"
+              style={{ width: "auto", height: "auto" }}
               src="/motylpng.webp"
             />
           </div>

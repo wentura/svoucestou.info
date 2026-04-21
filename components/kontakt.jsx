@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SITE } from "@/lib/site-config";
 
 export default function Kontakt() {
   return (
@@ -28,23 +29,23 @@ export default function Kontakt() {
           <hr />
           <div className="my-5 leading-relaxed text-gray-600 flex flex-col gap-y-2 md:flex-row md:justify-between">
             <a
-              href="tel:+420777687496"
+              href={`tel:${SITE.contactPhoneHref}`}
               className="px-6 py-2 rounded-md bg-monte-100 text-white font-medium shadow-xl hover:shadow-md transition-all duration-300 text-center"
             >
-              777 687 496{" "}
+              {SITE.contactPhoneDisplay}{" "}
             </a>
 
             <a
-              href="mailto:info@svoucestou.info"
+              href={`mailto:${SITE.contactEmail}`}
               className="px-6 py-2 rounded-md bg-monte-100 text-white font-medium shadow-xl hover:shadow-md transition-all duration-300 text-center"
             >
-              info@svoucestou.info
+              {SITE.contactEmail}
             </a>
           </div>
           <p className="my-5 leading-relaxed text-gray-600">
-            mlýn Kroužek
+            {SITE.addressStreet}
             <br />
-            Nebužely 3, 277 34, Nebužely
+            {SITE.addressPostalCode}, {SITE.addressCity}
           </p>
           <p className="text-sm text-gray-600 border-t border-gray-200 pt-4">
             <Link

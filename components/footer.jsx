@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import Matomo from "./Matomo";
+import { SITE } from "@/lib/site-config";
 import { sockyData } from "./sockyData";
 export default function Footer() {
   return (
@@ -100,7 +102,7 @@ export default function Footer() {
       <div className="bg-monte-200 pt-12 pb-12">
         <div className="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
           <p className="text-sm text-center text-gray-200 sm:text-left">
-            2017 - {new Date().getFullYear()} - Svou cestou - Montessori guru z.s. ,{" "}
+            2017 - {new Date().getFullYear()} - Svou cestou - {SITE.founderName},{" "}
             <a
               href="https://www.zbyneksvoboda.cz"
               className="ml-1 text-gray-200 underline underline-offset-2 decoration-gray-400"
@@ -109,6 +111,13 @@ export default function Footer() {
             >
               vytvořil Zbynek Svoboda
             </a>
+            .{" "}
+            <Link
+              href="/ochrana-soukromi"
+              className="ml-1 text-gray-200 underline underline-offset-2 decoration-gray-400"
+            >
+              Ochrana soukromí
+            </Link>
           </p>
           <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
             {sockyData.map((item, index) => (

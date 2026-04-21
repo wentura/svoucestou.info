@@ -1,0 +1,19 @@
+# Security
+
+## Aktuální minimum
+- Contact route je fail-closed při chybějících kritických env.
+- Povinná kontrola Origin/Referer pro `/api/contact`.
+- Honeypot + Turnstile token validace.
+- Rate limit: Upstash persistentní, fallback in-memory.
+- Uživatel dostává pouze obecné chyby, technické detaily jdou do server logů.
+
+## Known risks
+- Bez nakonfigurovaného Upstash běží rate limit jen v paměti instance.
+- Matomo běží v minimalistickém režimu, nutné držet transparentní komunikaci v privacy dokumentaci.
+
+## Release security checklist
+- [ ] `CONTACT_TO_EMAIL` odpovídá `info@svoucestou.info`.
+- [ ] `RESEND_FROM` používá ověřenou doménu.
+- [ ] Turnstile klíče jsou nastavené.
+- [ ] Upstash je dostupný (nebo je zdokumentovaný fallback).
+- [ ] Formulář vrací netechnické chyby.

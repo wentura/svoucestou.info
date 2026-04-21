@@ -1,4 +1,5 @@
 import Historie from "@/components/historie";
+import { SITE } from "@/lib/site-config";
 import Image from "next/image";
 import React from "react";
 
@@ -13,7 +14,7 @@ export const metadata = {
     title: "O nás | Svou Cestou",
     description:
       "Poznejte příběh Montessori školy a školky Svou Cestou. Naše historie, hodnoty a cesta k respektujícímu vzdělávání v přírodě CHKO Kokořínsko.",
-    url: "https://svoucestou.info/o-nas",
+    url: `${SITE.canonicalOrigin}/o-nas`,
   },
   twitter: {
     title: "O nás | Svou Cestou",
@@ -34,7 +35,7 @@ export default function Onas() {
           <Image
             alt="Svou cestou - Montessori škola a školka"
             className="object-cover object-center"
-            src="https://dummyimage.com/1200x500"
+            src="https://res.cloudinary.com/dam7wdzvx/image/upload/v1732404552/svoucestou.info/hero.webp"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
           />

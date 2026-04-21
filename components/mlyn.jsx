@@ -25,7 +25,7 @@ export default function Mlyn() {
           <Image
             width={500}
             height={250}
-            className="object-cover object-center rounded group-hover:-rotate-3 transition duration-300 ease-in-out drop-shadow-lg"
+            className="w-full h-auto object-cover object-center rounded group-hover:-rotate-3 transition duration-300 ease-in-out drop-shadow-lg"
             alt="hero"
             src="https://res.cloudinary.com/dam7wdzvx/image/upload/v1732399711/svoucestou.info/mlyn_krouzek.webp"
           />

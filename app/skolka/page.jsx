@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PRICING, SITE, formatCzk } from "@/lib/site-config";
 
 export const metadata = {
   title: "Montessori školka",
@@ -11,7 +12,7 @@ export const metadata = {
     title: "Montessori školka | Svou Cestou",
     description:
       "Montessori školka pro děti od 3 do 6 let. Objevování světa rukama a srdcem v přírodním prostředí CHKO Kokořínsko.",
-    url: "https://svoucestou.info/skolka",
+    url: `${SITE.canonicalOrigin}/skolka`,
   },
   twitter: {
     title: "Montessori školka | Svou Cestou",
@@ -129,10 +130,10 @@ export default function Skolka() {
                 učící úterý - čtvrtek
               </li>
               <li className="font-bold pt-4">
-                6500Kč měsíčně
+                {formatCzk(PRICING.monthlyTuitionCzk)} měsíčně
               </li>
               <li>
-              (sourozenec 10% sleva)
+                (sourozenec {PRICING.siblingDiscountPercent}% sleva)
               </li>
             </ul>
           </div>

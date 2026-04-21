@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
+import { SITE } from "@/lib/site-config";
 
-const BASE = "https://svoucestou.info";
+const BASE = SITE.canonicalOrigin;
 
 /** Veřejné routy (shodně s výstupem `next build`). */
 const PATHS = [
@@ -12,8 +13,9 @@ const PATHS = [
   "/novinky",
   "/montessori",
   "/o-nas",
+  "/ochrana-soukromi",
   "/skola12",
-  "/spolupráce",
+  "/spoluprace",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

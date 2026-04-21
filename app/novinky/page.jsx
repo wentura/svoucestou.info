@@ -1,4 +1,5 @@
 import { newsData } from "@/components/newsData";
+import { SITE } from "@/lib/site-config";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -15,7 +16,7 @@ export const metadata = {
     title: "Novinky a aktuality | Svou Cestou",
     description:
       "Aktuality a novinky z Montessori školy a školky Svou Cestou. Sledujte naše události, akce a dění ve škole.",
-    url: "https://svoucestou.info/novinky",
+    url: `${SITE.canonicalOrigin}/novinky`,
   },
   twitter: {
     title: "Novinky a aktuality | Svou Cestou",

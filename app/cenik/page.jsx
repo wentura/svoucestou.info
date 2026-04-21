@@ -1,9 +1,11 @@
 import ContactForm from "@/components/contact-form";
 import ContactInfoBlock from "@/components/contact-info-block";
+import { PRICING, SITE, formatCzk } from "@/lib/site-config";
 import Link from "next/link";
 
-const desc =
-  "Ceník Montessori školy a školky Svou Cestou: školné 6 000 Kč měsíčně, sourozenec sleva 10 %. Dotaz k ceně nebo zápisu můžete poslat přímo z této stránky. Podrobnosti k režimu dní na stránkách školka a škola.";
+const desc = `Ceník Montessori školy a školky Svou Cestou: školné ${formatCzk(
+  PRICING.monthlyTuitionCzk
+)} měsíčně, sourozenec sleva ${PRICING.siblingDiscountPercent} %. Dotaz k ceně nebo zápisu můžete poslat přímo z této stránky. Podrobnosti k režimu dní na stránkách školka a škola.`;
 
 export const metadata = {
   title: "Ceník",
@@ -14,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: "Ceník | Svou Cestou",
     description: desc,
-    url: "https://svoucestou.info/cenik",
+    url: `${SITE.canonicalOrigin}/cenik`,
   },
   twitter: {
     title: "Ceník | Svou Cestou",
@@ -60,13 +62,13 @@ export default function Cenik() {
                 </span>
               </td>
               <td className="px-4 py-4 text-gray-700">
-                učící úterý až čtvrtek
+                {PRICING.skolkaDays}
               </td>
               <td className="px-4 py-4 text-gray-900 whitespace-nowrap">
-                <strong>6 000 Kč</strong> / měsíc
+                <strong>{formatCzk(PRICING.monthlyTuitionCzk)}</strong> / měsíc
                 <br />
                 <span className="text-sm text-gray-600">
-                  sourozenec −10 %
+                  sourozenec −{PRICING.siblingDiscountPercent} %
                 </span>
               </td>
             </tr>
@@ -79,15 +81,13 @@ export default function Cenik() {
                 </span>
               </td>
               <td className="px-4 py-4 text-gray-700">
-                sportovní pondělí
-                <br />
-                učící úterý až čtvrtek
+                {PRICING.skolaDays}
               </td>
               <td className="px-4 py-4 text-gray-900 whitespace-nowrap">
-                <strong>6 000 Kč</strong> / měsíc
+                <strong>{formatCzk(PRICING.monthlyTuitionCzk)}</strong> / měsíc
                 <br />
                 <span className="text-sm text-gray-600">
-                  sourozenec −10 %
+                  sourozenec −{PRICING.siblingDiscountPercent} %
                 </span>
               </td>
             </tr>

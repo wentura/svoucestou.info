@@ -1,49 +1,49 @@
 import ContactForm from "@/components/contact-form";
 import ContactInfoBlock from "@/components/contact-info-block";
 import Kontakt from "@/components/kontakt";
+import { SITE } from "@/lib/site-config";
 import React from "react";
+
+const desc = `Kontaktujte Montessori školu a školku Svou Cestou. Adresa: ${SITE.addressStreet}, ${SITE.addressPostalCode} ${SITE.addressCity}. Telefon: ${SITE.contactPhoneDisplay}, email: ${SITE.contactEmail}`;
 
 export const metadata = {
   title: "Kontakt",
-  description:
-    "Kontaktujte Montessori školu a školku Svou Cestou. Adresa: Nebužely 3, mlýn Kroužek, 277 34 Nebužely. Telefon: 777 687 496, email: info@svoucestou.info",
+  description: desc,
   alternates: {
     canonical: "/kontakt",
   },
   openGraph: {
     title: "Kontakt | Svou Cestou",
-    description:
-      "Kontaktujte Montessori školu a školku Svou Cestou. Adresa: Nebužely 3, mlýn Kroužek, 277 34 Nebužely. Telefon: 777 687 496, email: info@svoucestou.info",
-    url: "https://svoucestou.info/kontakt",
+    description: desc,
+    url: `${SITE.canonicalOrigin}/kontakt`,
   },
   twitter: {
     title: "Kontakt | Svou Cestou",
-    description:
-      "Kontaktujte Montessori školu a školku Svou Cestou. Adresa: Nebužely 3, mlýn Kroužek, 277 34 Nebužely. Telefon: 777 687 496, email: info@svoucestou.info",
+    description: desc,
   },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://svoucestou.info/kontakt",
+  "@id": `${SITE.canonicalOrigin}/kontakt`,
   name: "Svou Cestou - Montessori škola a školka",
-  image: "https://svoucestou.info/svouCestou_logo.webp",
+  image: `${SITE.canonicalOrigin}/svouCestou_logo.webp`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Nebužely 3, mlýn Kroužek",
-    addressLocality: "Nebužely",
-    postalCode: "277 34",
-    addressCountry: "CZ",
+    streetAddress: SITE.addressStreet,
+    addressLocality: SITE.addressCity,
+    postalCode: SITE.addressPostalCode,
+    addressCountry: SITE.addressCountry,
   },
   geo: {
     "@type": "GeoCoordinates",
     latitude: "50.4167",
     longitude: "14.5667",
   },
-  telephone: "+420777687496",
-  email: "info@svoucestou.info",
-  url: "https://svoucestou.info",
+  telephone: SITE.contactPhoneHref,
+  email: SITE.contactEmail,
+  url: SITE.canonicalOrigin,
   priceRange: "$$",
 };
 

@@ -1,6 +1,8 @@
 import { Resend } from "resend";
 import { interestLabel } from "@/lib/contact-interest";
 import { allowContactSubmit } from "@/lib/contact-rate-limit";
+import { SITE } from "@/lib/site-config";
+import { verifyTurnstileToken } from "@/lib/turnstile";
 
 const MAX_LEN = {
   name: 200,
@@ -23,23 +25,46 @@ function getClientIp(request) {
   return request.headers.get("x-real-ip") || "unknown";
 }
 
-/** Srozumitelná hláška pro UI (Resend sandbox / ověření domény). */
-function messageFromResendError(error) {
-  const msg = typeof error?.message === "string" ? error.message : "";
-  if (
-    error?.name === "validation_error" ||
-    msg.includes("testing emails") ||
-    msg.includes("verify a domain")
-  ) {
-    return (
-      "Resend je v testovacím režimu: příjemce musí být e-mail vašeho Resend účtu. " +
-      "Do .env.local nastavte CONTACT_TO_EMAIL na tuto adresu, nebo na resend.com/domains ověřte doménu a použijte odesílatele z ní."
-    );
+const GENERIC_SEND_ERROR = "Odeslání se nepovedlo. Zkuste to prosím později.";
+
+function getOriginFromHeaderValue(value) {
+  if (!value) return null;
+  try {
+    return new URL(value).origin;
+  } catch {
+    return null;
   }
-  return "Odeslání se nepovedlo. Zkuste to prosím později.";
+}
+
+function hasAllowedOrigin(request) {
+  const allowedOrigins = new Set([
+    SITE.canonicalOrigin,
+    "https://svoucestou.info",
+  ]);
+
+  const origin = request.headers.get("origin");
+  const referer = request.headers.get("referer");
+
+  const originValue = getOriginFromHeaderValue(origin);
+  const refererValue = getOriginFromHeaderValue(referer);
+
+  if (originValue && allowedOrigins.has(originValue)) {
+    return true;
+  }
+  if (refererValue && allowedOrigins.has(refererValue)) {
+    return true;
+  }
+  return false;
 }
 
 export async function POST(request) {
+  if (!hasAllowedOrigin(request)) {
+    return Response.json(
+      { error: "Neplatný původ požadavku." },
+      { status: 403 }
+    );
+  }
+
   let body;
   try {
     body = await request.json();
@@ -47,7 +72,7 @@ export async function POST(request) {
     return Response.json({ error: "Neplatná data." }, { status: 400 });
   }
 
-  const { name, email, childAge, interest, message, website } = body;
+  const { name, email, childAge, interest, message, website, turnstileToken } = body;
 
   if (typeof website === "string" && website.trim() !== "") {
     return Response.json({ ok: true }, { status: 200 });
@@ -56,13 +81,18 @@ export async function POST(request) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     return Response.json(
-      { error: "E-mail není na serveru nakonfigurován." },
+      { error: "Kontaktní formulář je dočasně nedostupný." },
       { status: 503 }
     );
   }
 
   const ip = getClientIp(request);
-  if (!allowContactSubmit(ip)) {
+  const turnstile = await verifyTurnstileToken({ token: turnstileToken, ip });
+  if (!turnstile.ok) {
+    return Response.json({ error: turnstile.error }, { status: 400 });
+  }
+
+  if (!(await allowContactSubmit(ip))) {
     return Response.json(
       { error: "Příliš mnoho odeslání. Zkuste to znovu za chvíli." },
       { status: 429 }
@@ -91,11 +121,23 @@ export async function POST(request) {
     typeof childAge === "string" ? childAge.trim().slice(0, MAX_LEN.childAge) : "";
   const safeMessage = message.trim().slice(0, MAX_LEN.message);
 
-  const to =
-    process.env.CONTACT_TO_EMAIL?.trim() || "info@zbyneksvoboda.cz";
-  const from =
-    process.env.RESEND_FROM?.trim() ||
-    "Svou Cestou <onboarding@resend.dev>";
+  const to = process.env.CONTACT_TO_EMAIL?.trim().toLowerCase();
+  const from = process.env.RESEND_FROM?.trim();
+
+  if (!to || to !== SITE.contactEmail) {
+    console.error("CONTACT_TO_EMAIL missing or invalid, refusing to send");
+    return Response.json(
+      { error: "Kontaktní formulář je dočasně nedostupný." },
+      { status: 503 }
+    );
+  }
+  if (!from) {
+    console.error("RESEND_FROM missing, refusing to send");
+    return Response.json(
+      { error: "Kontaktní formulář je dočasně nedostupný." },
+      { status: 503 }
+    );
+  }
 
   const subject = `Dotaz Svou Cestou — ${interestLabel(interest)}`;
   const text = [
@@ -117,11 +159,8 @@ export async function POST(request) {
   });
 
   if (error) {
-    console.error("Resend error:", error);
-    return Response.json(
-      { error: messageFromResendError(error) },
-      { status: 502 }
-    );
+    console.error("Resend send failed:", error);
+    return Response.json({ error: GENERIC_SEND_ERROR }, { status: 502 });
   }
 
   return Response.json({ ok: true });

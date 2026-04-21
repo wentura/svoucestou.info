@@ -1,6 +1,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import RunningText from "@/components/runningText";
+import { SITE } from "@/lib/site-config";
 import { Josefin_Sans, Open_Sans, Playfair_Display, Yeseva_One } from "next/font/google";
 import "../public/style.css";
 import "./globals.css";
@@ -34,7 +35,7 @@ const yesevaOne = Yeseva_One({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://svoucestou.info"),
+  metadataBase: new URL(SITE.canonicalOrigin),
   title: {
     default: "Svou Cestou, montessori škola a školka",
     template: "%s | Svou Cestou",
@@ -45,7 +46,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "cs_CZ",
-    url: "https://svoucestou.info",
+    url: SITE.canonicalOrigin,
     siteName: "Svou Cestou",
     title: "Svou Cestou, montessori škola a školka",
     description:
@@ -88,19 +89,19 @@ const organizationSchema = {
   alternateName: "Montessori škola a školka Svou Cestou",
   description:
     "Montessori škola a školka v srdci CHKO Kokořínsko v historické budově mlýna Kroužek.",
-  url: "https://svoucestou.info",
-  logo: "https://svoucestou.info/svouCestou_logo.webp",
+  url: SITE.canonicalOrigin,
+  logo: `${SITE.canonicalOrigin}/svouCestou_logo.webp`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Nebužely 3, mlýn Kroužek",
-    addressLocality: "Nebužely",
-    postalCode: "277 34",
-    addressCountry: "CZ",
+    streetAddress: SITE.addressStreet,
+    addressLocality: SITE.addressCity,
+    postalCode: SITE.addressPostalCode,
+    addressCountry: SITE.addressCountry,
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+420777687496",
-    email: "info@svoucestou.info",
+    telephone: SITE.contactPhoneHref,
+    email: SITE.contactEmail,
     contactType: "Informace o škole a školce",
   },
   sameAs: [
