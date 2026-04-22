@@ -7,7 +7,7 @@
 ## Povinné env proměnné
 - `RESEND_API_KEY` - API klíč pro odesílání e-mailů.
 - `RESEND_FROM` - ověřený odesílatel.
-- `CONTACT_TO_EMAIL` - musí být `info@svoucestou.info`.
+- `CONTACT_TO_EMAIL` - cílový e-mail pro leady (platná e-mailová adresa).
 - `UPSTASH_REDIS_REST_URL` - URL pro persistentní rate limit (doporučeno).
 - `UPSTASH_REDIS_REST_TOKEN` - token pro Upstash (doporučeno).
 

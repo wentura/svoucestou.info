@@ -128,10 +128,10 @@ export async function POST(request) {
     typeof childAge === "string" ? childAge.trim().slice(0, MAX_LEN.childAge) : "";
   const safeMessage = message.trim().slice(0, MAX_LEN.message);
 
-  const to = process.env.CONTACT_TO_EMAIL?.trim().toLowerCase();
+  const to = (process.env.CONTACT_TO_EMAIL || SITE.contactEmail).trim().toLowerCase();
   const from = process.env.RESEND_FROM?.trim();
 
-  if (!to || to !== SITE.contactEmail) {
+  if (!isValidEmail(to)) {
     console.error("CONTACT_TO_EMAIL missing or invalid, refusing to send");
     return Response.json(
       { error: "Kontaktní formulář je dočasně nedostupný." },
