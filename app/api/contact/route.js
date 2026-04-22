@@ -2,7 +2,6 @@ import { Resend } from "resend";
 import { interestLabel } from "@/lib/contact-interest";
 import { allowContactSubmit } from "@/lib/contact-rate-limit";
 import { SITE } from "@/lib/site-config";
-import { verifyTurnstileToken } from "@/lib/turnstile";
 
 const MAX_LEN = {
   name: 200,
@@ -57,6 +56,12 @@ function hasAllowedOrigin(request) {
   return false;
 }
 
+function isValidAntiSpamAnswer(value) {
+  if (typeof value !== "string") return false;
+  const normalized = value.trim().toLowerCase();
+  return normalized === "7" || normalized === "sedm";
+}
+
 export async function POST(request) {
   if (!hasAllowedOrigin(request)) {
     return Response.json(
@@ -72,7 +77,7 @@ export async function POST(request) {
     return Response.json({ error: "Neplatná data." }, { status: 400 });
   }
 
-  const { name, email, childAge, interest, message, website, turnstileToken } = body;
+  const { name, email, childAge, interest, message, antiSpamAnswer, website } = body;
 
   if (typeof website === "string" && website.trim() !== "") {
     return Response.json({ ok: true }, { status: 200 });
@@ -86,16 +91,14 @@ export async function POST(request) {
     );
   }
 
-  const ip = getClientIp(request);
-  const turnstile = await verifyTurnstileToken({ token: turnstileToken, ip });
-  if (!turnstile.ok) {
-    console.error("Turnstile verification failed:", {
-      reason: turnstile.reason,
-      ip,
-    });
-    return Response.json({ error: turnstile.error }, { status: 400 });
+  if (!isValidAntiSpamAnswer(antiSpamAnswer)) {
+    return Response.json(
+      { error: "Bezpečnostní kontrola neprošla. Zkuste to prosím znovu." },
+      { status: 400 }
+    );
   }
 
+  const ip = getClientIp(request);
   if (!(await allowContactSubmit(ip))) {
     return Response.json(
       { error: "Příliš mnoho odeslání. Zkuste to znovu za chvíli." },

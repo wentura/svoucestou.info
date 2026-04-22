@@ -3,7 +3,7 @@
 ## Aktuální minimum
 - Contact route je fail-closed při chybějících kritických env.
 - Povinná kontrola Origin/Referer pro `/api/contact`.
-- Honeypot + Turnstile token validace.
+- Honeypot + jednoduchá bezpečnostní otázka.
 - Rate limit: Upstash persistentní, fallback in-memory.
 - Uživatel dostává pouze obecné chyby, technické detaily jdou do server logů.
 
@@ -14,6 +14,6 @@
 ## Release security checklist
 - [ ] `CONTACT_TO_EMAIL` odpovídá `info@svoucestou.info`.
 - [ ] `RESEND_FROM` používá ověřenou doménu.
-- [ ] Turnstile klíče jsou nastavené.
+- [ ] Bezpečnostní otázka ve formuláři odpovídá serverové validaci.
 - [ ] Upstash je dostupný (nebo je zdokumentovaný fallback).
 - [ ] Formulář vrací netechnické chyby.

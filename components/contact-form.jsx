@@ -4,17 +4,15 @@ import { useState } from "react";
 import { INTEREST_OPTIONS } from "@/lib/contact-interest";
 import { SITE } from "@/lib/site-config";
 import Link from "next/link";
-import TurnstileWidget from "./turnstile-widget";
 
 export default function ContactForm() {
-  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [childAge, setChildAge] = useState("");
   const [interest, setInterest] = useState("");
   const [message, setMessage] = useState("");
+  const [antiSpamAnswer, setAntiSpamAnswer] = useState("");
   const [website, setWebsite] = useState("");
-  const [turnstileToken, setTurnstileToken] = useState("");
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -32,8 +30,8 @@ export default function ContactForm() {
           childAge,
           interest,
           message,
+          antiSpamAnswer,
           website,
-          turnstileToken,
         }),
       });
       const data = await res.json().catch(() => ({}));
@@ -48,8 +46,8 @@ export default function ContactForm() {
       setChildAge("");
       setInterest("");
       setMessage("");
+      setAntiSpamAnswer("");
       setWebsite("");
-      setTurnstileToken("");
     } catch {
       setErrorMsg("Chyba spojení. Zkuste to znovu.");
       setStatus("idle");
@@ -169,18 +167,24 @@ export default function ContactForm() {
             className="rounded-md border border-gray-300 px-3 py-2 text-gray-900 focus:border-monte-100 focus:outline-none focus:ring-1 focus:ring-monte-100 disabled:opacity-60"
           />
         </label>
-        <div className="flex flex-col gap-1">
-          {turnstileSiteKey ? (
-            <TurnstileWidget
-              siteKey={turnstileSiteKey}
-              onVerify={setTurnstileToken}
-              onExpire={() => setTurnstileToken("")}
-            />
-          ) : null}
-        </div>
+        <label className="flex flex-col gap-1">
+          <span className="text-sm font-medium text-gray-800">
+            Bezpečnostní otázka: kolik je 3 + 4?
+          </span>
+          <input
+            required
+            type="text"
+            name="antiSpamAnswer"
+            inputMode="numeric"
+            value={antiSpamAnswer}
+            onChange={(e) => setAntiSpamAnswer(e.target.value)}
+            disabled={status === "loading"}
+            className="rounded-md border border-gray-300 px-3 py-2 text-gray-900 focus:border-monte-100 focus:outline-none focus:ring-1 focus:ring-monte-100 disabled:opacity-60"
+          />
+        </label>
         <button
           type="submit"
-          disabled={status === "loading" || (Boolean(turnstileSiteKey) && !turnstileToken)}
+          disabled={status === "loading"}
           className="mt-2 px-6 py-3 rounded-md bg-monte-100 text-white font-semibold shadow-md hover:opacity-95 transition-opacity w-fit disabled:opacity-60"
         >
           {status === "loading" ? "Odesílám…" : "Odeslat"}
