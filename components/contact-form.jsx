@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { INTEREST_OPTIONS } from "@/lib/contact-interest";
 import { SITE } from "@/lib/site-config";
 import Link from "next/link";
@@ -12,12 +12,50 @@ export default function ContactForm() {
   const [interest, setInterest] = useState("");
   const [message, setMessage] = useState("");
   const [antiSpamAnswer, setAntiSpamAnswer] = useState("");
+  const [antiSpamPrompt, setAntiSpamPrompt] = useState("");
+  const [antiSpamToken, setAntiSpamToken] = useState("");
+  const [antiSpamLoading, setAntiSpamLoading] = useState(true);
   const [website, setWebsite] = useState("");
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
+  const loadChallenge = useCallback(async (showError = true) => {
+    setAntiSpamLoading(true);
+    try {
+      const res = await fetch("/api/contact/challenge", { cache: "no-store" });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data?.prompt || !data?.token) {
+        throw new Error("challenge_load_failed");
+      }
+      setAntiSpamPrompt(data.prompt);
+      setAntiSpamToken(data.token);
+      if (showError) {
+        setErrorMsg("");
+      }
+    } catch {
+      setAntiSpamPrompt("");
+      setAntiSpamToken("");
+      if (showError) {
+        setErrorMsg("Bezpečnostní kontrolu se nepodařilo načíst. Obnovte prosím stránku.");
+      }
+    } finally {
+      setAntiSpamLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      void loadChallenge(true);
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [loadChallenge]);
+
   async function handleSubmit(e) {
     e.preventDefault();
+    if (!antiSpamToken) {
+      setErrorMsg("Bezpečnostní kontrolu se nepodařilo načíst. Obnovte prosím stránku.");
+      return;
+    }
     setErrorMsg("");
     setStatus("loading");
     try {
@@ -31,12 +69,17 @@ export default function ContactForm() {
           interest,
           message,
           antiSpamAnswer,
+          antiSpamToken,
           website,
         }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
         setErrorMsg(data.error || "Odeslání se nepovedlo.");
+        if (res.status === 400) {
+          setAntiSpamAnswer("");
+          await loadChallenge(false);
+        }
         setStatus("idle");
         return;
       }
@@ -48,6 +91,7 @@ export default function ContactForm() {
       setMessage("");
       setAntiSpamAnswer("");
       setWebsite("");
+      await loadChallenge(false);
     } catch {
       setErrorMsg("Chyba spojení. Zkuste to znovu.");
       setStatus("idle");
@@ -169,7 +213,8 @@ export default function ContactForm() {
         </label>
         <label className="flex flex-col gap-1">
           <span className="text-sm font-medium text-gray-800">
-            Bezpečnostní otázka: kolik je 3 + 4?
+            Bezpečnostní otázka:{" "}
+            {antiSpamPrompt || (antiSpamLoading ? "načítám..." : "dočasně nedostupná")}
           </span>
           <input
             required
@@ -178,13 +223,24 @@ export default function ContactForm() {
             inputMode="numeric"
             value={antiSpamAnswer}
             onChange={(e) => setAntiSpamAnswer(e.target.value)}
-            disabled={status === "loading"}
+            disabled={status === "loading" || antiSpamLoading || !antiSpamToken}
             className="rounded-md border border-gray-300 px-3 py-2 text-gray-900 focus:border-monte-100 focus:outline-none focus:ring-1 focus:ring-monte-100 disabled:opacity-60"
           />
         </label>
         <button
+          type="button"
+          onClick={() => {
+            setAntiSpamAnswer("");
+            loadChallenge(true);
+          }}
+          disabled={status === "loading" || antiSpamLoading}
+          className="w-fit text-sm text-monte-100 underline disabled:opacity-60"
+        >
+          Jiná otázka
+        </button>
+        <button
           type="submit"
-          disabled={status === "loading"}
+          disabled={status === "loading" || antiSpamLoading || !antiSpamToken}
           className="mt-2 px-6 py-3 rounded-md bg-monte-100 text-white font-semibold shadow-md hover:opacity-95 transition-opacity w-fit disabled:opacity-60"
         >
           {status === "loading" ? "Odesílám…" : "Odeslat"}

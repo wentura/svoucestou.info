@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { verifyContactChallenge } from "@/lib/contact-challenge";
 import { interestLabel } from "@/lib/contact-interest";
 import { allowContactSubmit } from "@/lib/contact-rate-limit";
 import { SITE } from "@/lib/site-config";
@@ -56,12 +57,6 @@ function hasAllowedOrigin(request) {
   return false;
 }
 
-function isValidAntiSpamAnswer(value) {
-  if (typeof value !== "string") return false;
-  const normalized = value.trim().toLowerCase();
-  return normalized === "7" || normalized === "sedm";
-}
-
 export async function POST(request) {
   if (!hasAllowedOrigin(request)) {
     return Response.json(
@@ -77,7 +72,8 @@ export async function POST(request) {
     return Response.json({ error: "Neplatná data." }, { status: 400 });
   }
 
-  const { name, email, childAge, interest, message, antiSpamAnswer, website } = body;
+  const { name, email, childAge, interest, message, antiSpamAnswer, antiSpamToken, website } =
+    body;
 
   if (typeof website === "string" && website.trim() !== "") {
     return Response.json({ ok: true }, { status: 200 });
@@ -91,7 +87,13 @@ export async function POST(request) {
     );
   }
 
-  if (!isValidAntiSpamAnswer(antiSpamAnswer)) {
+  const challenge = verifyContactChallenge({
+    token: antiSpamToken,
+    answer: antiSpamAnswer,
+    secret: apiKey,
+  });
+  if (!challenge.ok) {
+    console.warn("Contact anti-spam challenge failed:", { reason: challenge.reason });
     return Response.json(
       { error: "Bezpečnostní kontrola neprošla. Zkuste to prosím znovu." },
       { status: 400 }
