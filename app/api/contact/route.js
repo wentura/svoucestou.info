@@ -89,6 +89,10 @@ export async function POST(request) {
   const ip = getClientIp(request);
   const turnstile = await verifyTurnstileToken({ token: turnstileToken, ip });
   if (!turnstile.ok) {
+    console.error("Turnstile verification failed:", {
+      reason: turnstile.reason,
+      ip,
+    });
     return Response.json({ error: turnstile.error }, { status: 400 });
   }
 
