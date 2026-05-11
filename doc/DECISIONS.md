@@ -23,3 +23,7 @@
 ## 2026-04-21 - Analytics režim
 - Rozhodnutí: Matomo v minimalistickém režimu, transparentně popsané v privacy stránce.
 - Důvod: zachování základní provozní analytiky bez rozšiřování scope první vlny.
+
+## 2026-05-11 - Dependency update safety
+- Rozhodnutí: nepoužívat `npm audit fix --force` bez samostatného testovacího plánu; major upgrady dělat po dávkách s compatibility matrix (`Next.js`, `eslint-config-next`/`eslint`, `Tailwind`/`PostCSS`).
+- Důvod: force audit může rozbít kompatibilitu toolchainu a zastavit `lint`/`dev` i při čistém git stavu.
