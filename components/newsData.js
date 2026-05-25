@@ -18,6 +18,15 @@ export const newsData = [
     url: "/news",
   },
   {
+    title: "návštěva z komunity Samorost",
+    subtite: "návštěva",
+    datum: "25.května 2026",
+    text: "Někdy stačí malá náhoda. Skupina z komunitní školy Samorost k nám původně přijela jen zaparkovat – a přitom jsme objevili společnou řeč. Propojování alternativního komunitního vzdělávání v Česku dává smysl. Sdílíme zkušenosti, inspiraci i podporu. Protože když se spojíme, můžeme růst všichni.",
+    img:
+      "https://res.cloudinary.com/dam7wdzvx/image/upload/v1779737247/svoucestou.info/news/samorost.webp",
+    url: "/news",
+  },
+  {
     title: "Rodina a tradice",
     subtite: "muzeum",
     datum: "25.března 2026",
