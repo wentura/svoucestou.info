@@ -3,70 +3,32 @@ import styles from "./runningText.module.css";
 
 export default function RunningText() {
   const newsText =
-    "DEN OTEVŘENÝCH DVEŘÍ - 21. 5. 2026 od 15:00 do 17:00, více informací na Facebookové stránce a události. Těšíme se na Vás";
+    // "DEN OTEVŘENÝCH DVEŘÍ - 21. 5. 2026 od 15:00 do 17:00, více informací na Facebookové stránce a události. Těšíme se na Vás";
+    "Provoz celý týden - možnost docházky 3-5 dní v týdnu od září 2026";
 
   return (
     <div className={styles.tickerContainer}>
       <div className={styles.ticker}>
         <span>
-          DEN OTEVŘENÝCH DVEŘÍ - 21. 5. 2026 od 15:00 do 17:00,{" "}
-          <a
-            href="https://www.facebook.com/svoucestoumontessori"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            více informací na Facebooku.
-          </a>{" "}
-          Těšíme se na Vás.
+        {newsText}
         </span>
         <span>
-          DEN OTEVŘENÝCH DVEŘÍ - 21. 5. 2026 od 15:00 do 17:00,{" "}
-          <a
-            href="https://www.facebook.com/svoucestoumontessori"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            více informací na Facebooku.
-          </a>{" "}
-          Těšíme se na Vás.
+        {newsText}
+        </span><span>
+        {newsText}
+        </span><span>
+        {newsText}
+        </span><span>
+        {newsText}
         </span>
         <span>
-          DEN OTEVŘENÝCH DVEŘÍ - 21. 5. 2026 od 15:00 do 17:00,{" "}
-          <a
-            href="https://www.facebook.com/svoucestoumontessori"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            více informací na Facebooku.
-          </a>{" "}
-          Těšíme se na Vás.
-        </span>
-        <span>
-          DEN OTEVŘENÝCH DVEŘÍ - 21. 5. 2026 od 15:00 do 17:00,{" "}
-          <a
-            href="https://www.facebook.com/svoucestoumontessori"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            více informací na Facebooku.
-          </a>{" "}
-          Těšíme se na Vás.
-        </span>
-        <span>
-          DEN OTEVŘENÝCH DVEŘÍ - 21. 5. 2026 od 15:00 do 17:00,{" "}
-          <a
-            href="https://www.facebook.com/svoucestoumontessori"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            více informací na Facebooku.
-          </a>{" "}
-          Těšíme se na Vás.
+        {newsText}
+        </span><span>
+        {newsText}
+        </span><span>
+        {newsText}
+        </span><span>
+        {newsText}
         </span>
       </div>
     </div>

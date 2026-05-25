@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { PRICING, SITE, formatCzk } from "@/lib/site-config";
 
+const skolkaPricingTiers = [
+  { daysKey: "skolkaDays", priceKey: "monthlyTuitionCzkSkolka" },
+];
+
 export const metadata = {
   title: "Montessori školka",
   description:
@@ -121,21 +125,6 @@ export default function Skolka() {
               práci, zkoumání a objevování, a to jak uvnitř, tak venku v
               přírodě.
             </p>
-            <h3 className="textPodNadpis mb-4 mt-12">Cena</h3>
-            <ul className="leading-relaxed  mb-4">
-              {/* <li>
-                sportovní pondělí
-              </li> */}
-              <li>
-                učící úterý - čtvrtek
-              </li>
-              <li className="font-bold pt-4">
-                {formatCzk(PRICING.monthlyTuitionCzk)} měsíčně
-              </li>
-              <li>
-                (sourozenec {PRICING.siblingDiscountPercent}% sleva)
-              </li>
-            </ul>
           </div>
           <div className="sm:w-1/2 sm:pr-8 sm:py-8 mt-4 pt-4 sm:mt-0  text-center mx-auto">
             <Image
@@ -150,6 +139,36 @@ export default function Skolka() {
             </div>
             <div className="mb-4 text-sm italic font-light">M.Montessori</div>
           </div>
+        </div>
+
+        <div className="w-full max-w-screen-md p-4 rounded-xl mx-auto">
+          <h3 className="textPodNadpis mb-4 mt-12">Cena</h3>
+          <div className="mx-auto grid max-w-sm grid-cols-1 gap-6 items-end mb-4">
+            {skolkaPricingTiers.map(({ daysKey, priceKey }) => (
+              <article
+                key={priceKey}
+                className="flex flex-col rounded-2xl border border-gray-200 bg-white"
+              >
+                <span
+                  className="mb-3 inline-block w-full rounded-t-lg bg-monte-100 p-2 text-center text-sm font-bold text-white md:text-base"
+                  dangerouslySetInnerHTML={{ __html: PRICING[daysKey] }}
+                />
+                <ul className="mt-auto list-inside list-disc space-y-1 p-2 text-sm leading-relaxed text-gray-600">
+                  {PRICING.skolkaTier1Description.map((item, index) => (
+                    <li key={`${daysKey}-${index}`}>{item}</li>
+                  ))}
+                </ul>
+                <p className="mt-auto text-right text-sm leading-relaxed text-gray-600">
+                  <span className="w-full self-end p-2 text-right text-lg">
+                    {formatCzk(PRICING[priceKey])}/měsíc
+                  </span>
+                </p>
+              </article>
+            ))}
+          </div>
+          <p className="mb-4 text-sm text-gray-700">
+            (sourozenec {PRICING.siblingDiscountPercent}% sleva)
+          </p>
         </div>
       </div>
     </section>

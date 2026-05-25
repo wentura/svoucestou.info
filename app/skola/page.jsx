@@ -1,6 +1,30 @@
 import Image from "next/image";
 import { PRICING, SITE, formatCzk } from "@/lib/site-config";
 
+const skolaPricingTiers = [
+  {
+    daysKey: "skolaDaysTier1",
+    priceKey: "skolaTier1",
+    descKey: "skolaTier1Description",
+    cardClass: "min-h-[11rem] p-4 shadow-sm",
+    priceClass: "text-xl",
+  },
+  {
+    daysKey: "skolaDaysTier2",
+    priceKey: "skolaTier2",
+    descKey: "skolaTier2Description",
+    cardClass: "min-h-[14rem] p-5 shadow-md",
+    priceClass: "text-xl",
+  },
+  {
+    daysKey: "skolaDaysTier3",
+    priceKey: "skolaTier3",
+    descKey: "skolaTier3Description",
+    cardClass: "min-h-[17rem] p-6 shadow-xl",
+    priceClass: "text-2xl",
+  },
+];
+
 export const metadata = {
   title: "Montessori škola",
   description:
@@ -69,52 +93,6 @@ export default function Skola() {
               přístupu vyprávění velkých příběhů, které děti vedou k hlubšímu
               pochopení světa.
             </p>
-            <h3 className="textPodNadpis mb-4 mt-12">
-              Velké příběhy – Učení prostřednictvím příběhů
-            </h3>
-            <p className="leading-relaxed mb-4">
-              Na začátku každého školního roku představujeme dětem 5 (resp. 6)
-              velkých příběhů, které jim pomáhají chápat základní principy světa
-              kolem nás:
-            </p>
-            {/* <ul className="list-none seznamSkola text-base">
-              <li>
-                <span className="font-bold">Příběh o vzniku vesmíru</span>–
-                „Bůh, který neměl ruce“
-              </li>
-              <li>
-                <span className="font-bold">
-                  Příběh o vzniku života na Zemi
-                </span>{" "}
-              </li>
-              <li>
-                <span className="font-bold">
-                  Příběh o vývoji člověka na Zemi
-                </span>{" "}
-              </li>
-              <li>
-                <span className="font-bold">
-                  První příběh o komunikaci pomocí znaků
-                </span>{" "}
-                – „O býku a domě“
-              </li>
-              <li>
-                <span className="font-bold">
-                  Druhý příběh o komunikaci pomocí znaků
-                </span>{" "}
-                – „Příběh lovců“
-              </li>
-              <li>
-                <span className="font-bold">Příběh o lidském těle</span> – „O
-                velké řece“
-              </li>
-            </ul> */}
-            <p className="leading-relaxed mb-4 mt-12">
-              Tyto příběhy jsou základem pro další učení a rozvíjení zájmu dětí
-              o různá témata. Postupně mohou děti objevovat menší a konkrétnější
-              příběhy, které jim pomáhají nalézat odpovědi na jejich otázky a
-              rozvíjet nové zájmy.
-            </p>
           </div>
           <div className="sm:w-1/2 sm:pl-8 sm:py-8 mt-4 pt-4 sm:mt-0  text-center mx-auto">
             <Image
@@ -134,6 +112,15 @@ export default function Skola() {
         <div className="flex flex-col sm:flex-row-reverse mt-10">
           <div className="sm:w-1/2 sm:pl-8 sm:py-8">
             <h3 className="textPodNadpis mb-4 mt-12">
+            Velké příběhy – Učení prostřednictvím příběhů
+            </h3>
+            <p className="leading-relaxed mb-4">
+            Na začátku každého školního roku představujeme dětem 5 (resp. 6) velkých příběhů, které jim pomáhají chápat základní principy světa kolem nás.
+            </p>
+            <p className="leading-relaxed mb-4">
+            Tyto příběhy jsou základem pro další učení a rozvíjení zájmu dětí o různá témata. Postupně mohou děti objevovat menší a konkrétnější příběhy, které jim pomáhají nalézat odpovědi na jejich otázky a rozvíjet nové zájmy.
+            </p>
+            <h3 className="textPodNadpis mb-4 mt-12">
               Učení ve věkově smíšených skupinách
             </h3>
             <p className="leading-relaxed mb-4">
@@ -143,7 +130,21 @@ export default function Skola() {
               zatímco mladší se učí od starších. Tento přístup podporuje
               vzájemné obohacení a hlubší vztahy mezi dětmi.
             </p>
-            <h3 className="textPodNadpis mb-4 mt-12">
+            
+            </div><div className="sm:w-1/2 sm:pr-8 sm:py-8 mt-4 pt-4 sm:mt-0  text-center mx-auto">
+            <Image
+              height={600}
+              width={600}
+              alt="content"
+              className="rounded-xl drop-shadow-xl mx-auto"
+              style={{ width: "auto", height: "auto" }}
+              src="/motylpng.webp"
+            />
+          </div>
+            </div>
+            <div className="flex flex-col sm:flex-row mt-10">
+          <div className="sm:w-1/2 sm:pr-8 sm:py-8">
+          <h3 className="textPodNadpis mb-4 mt-12">
               Učení mimo školní lavice
             </h3>
             <p className="leading-relaxed  mb-4">
@@ -154,7 +155,9 @@ export default function Skola() {
               organizování výletů nebo návštěvách muzeí. Tento zážitek jim
               pomáhá pochopit reálný svět a rozvíjí jejich samostatnost.
             </p>
-            <h3 className="textPodNadpis mb-4 mt-12">Každodenní harmonogram</h3>
+          </div>
+          <div className="sm:w-1/2 sm:pl-8 sm:py-8 mt-4 pt-4 sm:mt-0 mx-auto">
+          <h3 className="textPodNadpis mb-4 mt-12">Každodenní harmonogram</h3>
             <p className="leading-relaxed  mb-4">
               Náš den je pečlivě strukturován, aby respektoval přirozené rytmy
               dětí, ale zároveň jim poskytoval dostatek volnosti pro vlastní
@@ -163,14 +166,14 @@ export default function Skola() {
             </p>
             <ul className="list-disc pl-5 mb-4 space-y-1 text-gray-700">
               <li>
-                <strong>8:00–8:30</strong> — příchod, klidná příprava na den
+                <strong>8:15–8:45</strong> — příchod, klidná příprava na den
               </li>
               <li>
-                <strong>8:30–12:00</strong> — pracovní blok (Montessori
+                <strong>9:00–12:20</strong> — pracovní blok (Montessori
                 aktivity, projekty, individuální práce; část uvnitř / venku)
               </li>
               <li>
-                <strong>12:00–13:00</strong> — oběd a odpočinek
+                <strong>12:20–13:00</strong> — oběd a odpočinek
               </li>
               <li>
                 <strong>odpoledne</strong> — pokračování práce, výpravy,
@@ -181,34 +184,43 @@ export default function Skola() {
               Aktuální týdenní plán vám rádi upřesníme na osobní schůzce nebo
               e-mailem.
             </p>
-            
-            <h3 className="textPodNadpis mb-4 mt-12">Cena</h3>
-            <ul className="leading-relaxed  mb-4">
-              <li>
-                sportovní pondělí
-              </li>
-              <li>
-                učící úterý - čtvrtek
-              </li>
-              <li className="font-bold pt-4">
-                {formatCzk(PRICING.monthlyTuitionCzk)} měsíčně
-              </li>
-              <li>
-                (sourozenec {PRICING.siblingDiscountPercent}% sleva)
-              </li>
-            </ul>
           </div>
-          <div className="sm:w-1/2 sm:pr-8 sm:py-8 mt-4 pt-4 sm:mt-0  text-center mx-auto">
-            <Image
-              height={600}
-              width={600}
-              alt="content"
-              className="rounded-xl drop-shadow-xl mx-auto"
-              style={{ width: "auto", height: "auto" }}
-              src="/motylpng.webp"
-            />
           </div>
+          <div className="flex flex-col sm:flex-row-reverse mt-10">
+          
+          
         </div>
+        <div className="w-full max-w-screen-md p-4 rounded-xl mx-auto">
+            <h3 className="textPodNadpis mb-4 mt-12">Cena</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end mb-4 md:items-center">
+              {skolaPricingTiers.map(
+                ({ daysKey, priceKey, descKey, cardClass, priceClass }) => (
+                  <article
+                    key={priceKey}
+                    className={`rounded-2xl border border-gray-200 bg-white flex flex-col`}
+                  >
+                    <span className="font-bold text-sm md:text-base inline-block w-fit mb-3 text-monte-100 w-full text-center bg-monte-100 p-2 rounded-t-lg text-white" dangerouslySetInnerHTML={{ __html: PRICING[daysKey] }} />
+                    
+                    <ul className="text-sm text-gray-600 leading-relaxed mt-auto p-2 list-disc list-inside space-y-1">
+                      {PRICING[descKey]?.length ? (
+                        <ul className="mt-auto list-inside list-disc space-y-1 p-2 text-sm leading-relaxed text-gray-600">
+                          {PRICING[descKey].map((item, index) => (
+                            <li key={`${descKey}-${index}`}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </ul>
+                    <p className="text-sm text-gray-600 leading-relaxed mt-auto text-right">
+                      <span className="text-lg p-2 text-right w-full self-end">{formatCzk(PRICING[priceKey])}/měsíc</span>
+                    </p>
+                  </article>
+                )
+              )}
+            </div>
+            <p className="text-sm text-gray-700 mb-4">
+              (sourozenec {PRICING.siblingDiscountPercent}% sleva)
+            </p>
+          </div>
       </div>
     </section>
   );

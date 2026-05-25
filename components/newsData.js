@@ -9,6 +9,15 @@ export const newsData = [
   //   },https://res.cloudinary.com/dam7wdzvx/image/upload/v1746256962/svoucestou.info/news/mozaika1.webp
   
   {
+    static:true,
+    title: "Provoz celý týden",
+    subtite: "muzeum",
+    datum: "25.března 2026",
+    color: "bg-monte-100",
+    text: "Od září 2026 měníme model školní i školkové docházky. Nově je možnost docházky 3-5 dní v týdnu. Díky vám všem za podněty a podporu k rozhdonutí.",
+    url: "/news",
+  },
+  {
     title: "Rodina a tradice",
     subtite: "muzeum",
     datum: "25.března 2026",

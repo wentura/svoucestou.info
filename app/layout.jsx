@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import MobileNavRouteSync from "@/components/MobileNavRouteSync";
 import RunningText from "@/components/runningText";
 import { SITE } from "@/lib/site-config";
 import { Josefin_Sans, Open_Sans, Playfair_Display, Yeseva_One } from "next/font/google";
@@ -118,8 +119,9 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        {/* <RunningText /> */}
+        <RunningText />
         <Header />
+        <MobileNavRouteSync />
 
         {children}
         {/* <Podpora /> */}

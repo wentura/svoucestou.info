@@ -31,3 +31,105 @@
     @apply pb-1;
   }
 }
+
+/* Mobilní menu — čisté CSS, funguje bez hydratace Reactu */
+.nav-menu-toggle-slot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  transition: width 300ms, height 300ms;
+}
+
+.nav-menu-toggle {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.nav-menu-toggle-button {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.nav-menu-icon-open {
+  display: flex;
+}
+
+.nav-menu-icon-close {
+  display: none;
+}
+
+#mobile-nav-toggle:checked ~ .nav-menu-toggle-button .nav-menu-icon-open {
+  display: none;
+}
+
+#mobile-nav-toggle:checked ~ .nav-menu-toggle-button .nav-menu-icon-close {
+  display: flex;
+}
+
+.nav-menu-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.nav-menu-backdrop {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background-color: rgb(0 0 0 / 0.3);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.nav-menu-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 24rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #fff;
+  padding-block: 0.5rem;
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+body:has(#mobile-nav-toggle:checked) {
+  overflow: hidden;
+}
+
+body:has(#mobile-nav-toggle:checked) #mobile-nav-overlay {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .nav-menu-overlay {
+    display: none !important;
+  }
+
+  body:has(#mobile-nav-toggle:checked) {
+    overflow: auto;
+  }
+}

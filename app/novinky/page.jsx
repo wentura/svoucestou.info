@@ -38,7 +38,16 @@ export default function ShortNews() {
         <div className="flex flex-wrap -m-4">
           {newsData.map((item, index) => (
             <div className={`xl:w-1/4 md:w-1/2 p-4 `} key={index}>
-              <div className="bg-gray-50 rounded-lg">
+              {item.static ?
+              (
+                <div className={`${item.color} rounded-lg`}>
+                <h2 className="text-xl md:text-2xl text-white textNadpis pt-4 px-4">{item.title}</h2>
+                <p className="p-4 text-white">{item.text}</p>
+                </div>
+              )
+              :
+              (
+              <div className={`${item.color} rounded-lg`}>
                 {item.video ? (
                   <AutoPlayVideo
                     src={item.video}
@@ -64,6 +73,7 @@ export default function ShortNews() {
                   <p className="">{item.text}</p>
                 </div>
               </div>
+              )}
             </div>
           ))}
         </div>

@@ -1,54 +1,120 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { MOBILE_NAV_TOGGLE_ID } from "@/lib/mobile-nav";
+import MobileNavLink from "./MobileNavLink";
 import { navigationData } from "./navigationData";
 
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+const desktopLinkClassName =
+  "px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 md:hover:bg-transparent";
 
+const mobileLinkClassName =
+  "block rounded-lg px-4 py-3 text-center text-lg text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-900 active:bg-gray-100";
+
+function BurgerIcon() {
   return (
-    <nav className="flex flex-wrap items-center justify-center md:ml-auto">
-      {/* Hamburger button */}
-      <button
-        className="md:hidden p-2 rounded-lg hover:bg-gray-100"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Toggle menu"
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          {isOpen ? (
-            <path d="M6 18L18 6M6 6l12 12" />
-          ) : (
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          )}
-        </svg>
-      </button>
+    <svg
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      aria-hidden
+    >
+      <path d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  );
+}
 
-      {/* Navigation links */}
+function CloseIcon() {
+  return (
+    <svg
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      aria-hidden
+    >
+      <path d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  );
+}
+
+export default function Navigation({ isScrolled = false }) {
+  return (
+    <>
       <div
-        className={`${
-          isOpen ? "flex" : "hidden"
-        } md:flex flex-col md:flex-row w-full md:w-auto absolute md:relative top-full left-0 md:top-auto md:left-auto bg-white md:bg-transparent shadow-lg md:shadow-none z-30`}
+        className={`relative z-[120] ml-auto flex shrink-0 items-center transition-all duration-300 md:h-auto md:w-auto ${
+          isScrolled ? "h-10 w-10" : "h-12 w-12"
+        }`}
       >
-        {navigationData.map((item, index) => (
-          <Link
-            key={index}
-            href={item.href}
-            className="px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 md:hover:bg-transparent"
-            onClick={() => setIsOpen(false)}
+        {/* Mobil: v gridu headeru — posouvá se s obsahem při scrollu */}
+        <div className="nav-menu-toggle-slot md:hidden">
+          <input
+            type="checkbox"
+            id={MOBILE_NAV_TOGGLE_ID}
+            className="nav-menu-toggle peer"
+          />
+          <label
+            htmlFor={MOBILE_NAV_TOGGLE_ID}
+            className={`nav-menu-toggle-button transition-transform duration-300 ${
+              isScrolled ? "scale-90" : "scale-100"
+            }`}
           >
-            {item.title}
-          </Link>
-        ))}
+            <span className="nav-menu-icon-open">
+              <BurgerIcon />
+            </span>
+            <span className="nav-menu-icon-close">
+              <CloseIcon />
+            </span>
+          </label>
+        </div>
+
+        <nav
+          className="hidden flex-row flex-wrap items-center justify-center md:flex"
+          aria-label="Hlavní navigace"
+        >
+          {navigationData.map((item) => (
+            <Link key={item.href} href={item.href} className={desktopLinkClassName}>
+              {item.title}
+            </Link>
+          ))}
+        </nav>
       </div>
-    </nav>
+
+      <div id="mobile-nav-overlay" className="nav-menu-overlay">
+        <label
+          htmlFor={MOBILE_NAV_TOGGLE_ID}
+          className="nav-menu-backdrop"
+          aria-label="Zavřít menu"
+        />
+        <nav className="nav-menu-panel" aria-label="Mobilní navigace">
+          <div className="mb-4 flex items-center justify-center px-4 pt-2">
+            <Image
+              src="/svouCestou_logo.webp"
+              height={80}
+              width={80}
+              className="h-auto w-8"
+              alt=""
+              aria-hidden
+            />
+            <span className="textNadpis truncate pl-4 text-md">Svou cestou</span>
+          </div>
+          {navigationData.map((item) => (
+            <MobileNavLink
+              key={item.href}
+              href={item.href}
+              className={mobileLinkClassName}
+            >
+              {item.title}
+            </MobileNavLink>
+          ))}
+        </nav>
+      </div>
+    </>
   );
 }
