@@ -4,7 +4,7 @@ import styles from "./runningText.module.css";
 export default function RunningText() {
   const newsText =
     // "DEN OTEVŘENÝCH DVEŘÍ - 21. 5. 2026 od 15:00 do 17:00, více informací na Facebookové stránce a události. Těšíme se na Vás";
-    "Provoz celý týden - možnost docházky 3-5 dní v týdnu od září 2026";
+    "NOVĚ ŠKOLKA 4 dny v týdnu - ŠKOLA AŽ 5 dní v týdnu";
 
   return (
     <div className={styles.tickerContainer}>
