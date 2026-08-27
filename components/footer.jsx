@@ -118,6 +118,12 @@ export default function Footer() {
             >
               Ochrana soukromí
             </Link>
+            <Link
+              href="https://management.svoucestou.info"
+              className="ml-1 text-gray-200 underline underline-offset-2 decoration-gray-400"
+            >
+              Školní / školková aplikace
+            </Link>
           </p>
           <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
             {sockyData.map((item, index) => (
