@@ -169,6 +169,9 @@ export default function Skolka() {
           <p className="mb-4 text-sm text-gray-700">
             (sourozenec {PRICING.siblingDiscountPercent}% sleva)
           </p>
+          <p className="mb-4 text-xl text-gray-700">
+            možnost celotýdenní docházky (pondělí - pátek)
+          </p>
         </div>
       </div>
     </section>

@@ -39,4 +39,9 @@ export const navigationData = [
     href: "/kontakt",
     icon: "kontakt",
   },
+  {
+    title: "Apka",
+    href: "https://management.svoucestou.info",
+    icon: "aplikace",
+  },
 ];
