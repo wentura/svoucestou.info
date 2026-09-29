@@ -1,5 +1,11 @@
 export const PodporaData = [
   {
+    name: "PRAGOTHERM",
+    subname: "servis fasád s.r.o.",
+    logo: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1726500854/svoucestou.info/old/alza_czpng.webp",
+    url: "https://www.servisfasad.eu/",
+  },
+  {
     name: "Zbyněk Svoboda",
     subname: "Digitální stratég a konzultant",
     logo: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1726500854/svoucestou.info/old/alza_czpng.webp",
