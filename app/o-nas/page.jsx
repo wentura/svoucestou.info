@@ -3,23 +3,23 @@ import { SITE } from "@/lib/site-config";
 import Image from "next/image";
 import React from "react";
 
+const desc =
+  "Poznejte příběh Montessori školy a školky Svou Cestou v Nebuželích 3 – historický mlýn Kroužek. Historie, hodnoty a cesta k respektujícímu vzdělávání v CHKO Kokořínsko.";
+
 export const metadata = {
   title: "O nás",
-  description:
-    "Poznejte příběh Montessori školy a školky Svou Cestou. Naše historie, hodnoty a cesta k respektujícímu vzdělávání v přírodě CHKO Kokořínsko.",
+  description: desc,
   alternates: {
     canonical: "/o-nas",
   },
   openGraph: {
     title: "O nás | Svou Cestou",
-    description:
-      "Poznejte příběh Montessori školy a školky Svou Cestou. Naše historie, hodnoty a cesta k respektujícímu vzdělávání v přírodě CHKO Kokořínsko.",
+    description: desc,
     url: `${SITE.canonicalOrigin}/o-nas`,
   },
   twitter: {
     title: "O nás | Svou Cestou",
-    description:
-      "Poznejte příběh Montessori školy a školky Svou Cestou. Naše historie, hodnoty a cesta k respektujícímu vzdělávání v přírodě CHKO Kokořínsko.",
+    description: desc,
   },
 };
 

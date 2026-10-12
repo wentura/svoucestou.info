@@ -5,23 +5,23 @@ const skolkaPricingTiers = [
   { daysKey: "skolkaDays", priceKey: "monthlyTuitionCzkSkolka" },
 ];
 
+const desc =
+  "Montessori školka Svou Cestou pro děti od 3 do 6 let v Nebuželích 3 – historický mlýn Kroužek, CHKO Kokořínsko. Objevování světa rukama a srdcem v přírodním prostředí.";
+
 export const metadata = {
   title: "Montessori školka",
-  description:
-    "Montessori školka pro děti od 3 do 6 let. Objevování světa rukama a srdcem v přírodním prostředí CHKO Kokořínsko.",
+  description: desc,
   alternates: {
     canonical: "/skolka",
   },
   openGraph: {
     title: "Montessori školka | Svou Cestou",
-    description:
-      "Montessori školka pro děti od 3 do 6 let. Objevování světa rukama a srdcem v přírodním prostředí CHKO Kokořínsko.",
+    description: desc,
     url: `${SITE.canonicalOrigin}/skolka`,
   },
   twitter: {
     title: "Montessori školka | Svou Cestou",
-    description:
-      "Montessori školka pro děti od 3 do 6 let. Objevování světa rukama a srdcem v přírodním prostředí CHKO Kokořínsko.",
+    description: desc,
   },
 };
 

@@ -2,23 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/site-config";
 
+const desc =
+  "Montessori škola Svou Cestou pro starší děti (12+): uplatnění vědomostí v reálném světě. Nebužely 3, historický mlýn Kroužek, CHKO Kokořínsko.";
+
 export const metadata = {
   title: "Montessori škola 12+",
-  description:
-    "Montessori škola pro starší děti (12+): uplatnění vědomostí v reálném světě. Svou Cestou, mlýn Kroužek u Nebužel.",
+  description: desc,
   alternates: {
     canonical: "/skola12",
   },
   openGraph: {
     title: "Montessori škola 12+ | Svou Cestou",
-    description:
-      "Montessori škola pro starší děti — uplatnění vědomostí v reálném světě. Svou Cestou.",
+    description: desc,
     url: `${SITE.canonicalOrigin}/skola12`,
   },
   twitter: {
     title: "Montessori škola 12+ | Svou Cestou",
-    description:
-      "Montessori škola pro starší děti — uplatnění vědomostí v reálném světě. Svou Cestou.",
+    description: desc,
   },
 };
 

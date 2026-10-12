@@ -5,23 +5,23 @@ import Link from "next/link";
 import React from "react";
 import AutoPlayVideo from "@/components/AutoPlayVideo";
 
+const desc =
+  "Aktuality a novinky z Montessori školy a školky Svou Cestou v Nebuželích (mlýn Kroužek, CHKO Kokořínsko). Události, akce a dění ve škole.";
+
 export const metadata = {
   title: "Novinky a aktuality",
-  description:
-    "Aktuality a novinky z Montessori školy a školky Svou Cestou. Sledujte naše události, akce a dění ve škole.",
+  description: desc,
   alternates: {
     canonical: "/novinky",
   },
   openGraph: {
     title: "Novinky a aktuality | Svou Cestou",
-    description:
-      "Aktuality a novinky z Montessori školy a školky Svou Cestou. Sledujte naše události, akce a dění ve škole.",
+    description: desc,
     url: `${SITE.canonicalOrigin}/novinky`,
   },
   twitter: {
     title: "Novinky a aktuality | Svou Cestou",
-    description:
-      "Aktuality a novinky z Montessori školy a školky Svou Cestou. Sledujte naše události, akce a dění ve škole.",
+    description: desc,
   },
 };
 

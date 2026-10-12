@@ -25,23 +25,23 @@ const skolaPricingTiers = [
   },
 ];
 
+const desc =
+  "Montessori škola Svou Cestou a výuková skupina pro děti na domácím vzdělávání (5–12+ let) v Nebuželích 3 – mlýn Kroužek, CHKO Kokořínsko. Kosmická výchova, velké příběhy a smíšené skupiny.";
+
 export const metadata = {
   title: "Montessori škola",
-  description:
-    "Montessori škola a výuková skupina pro děti na domácím vzdělávání (5–12+ let). Kosmická výchova, velké příběhy, smíšené skupiny. CHKO Kokořínsko, mlýn Kroužek.",
+  description: desc,
   alternates: {
     canonical: "/skola",
   },
   openGraph: {
     title: "Montessori škola | Svou Cestou",
-    description:
-      "Montessori škola a výuková skupina pro děti na domácím vzdělávání (5–12+ let). Kosmická výchova, velké příběhy, smíšené skupiny. CHKO Kokořínsko.",
+    description: desc,
     url: `${SITE.canonicalOrigin}/skola`,
   },
   twitter: {
     title: "Montessori škola | Svou Cestou",
-    description:
-      "Montessori škola a výuková skupina pro děti na domácím vzdělávání (5–12+ let). Kosmická výchova, velké příběhy, smíšené skupiny. CHKO Kokořínsko.",
+    description: desc,
   },
 };
 

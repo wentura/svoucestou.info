@@ -9,23 +9,22 @@ import Tym from "@/components/tym";
 import Usp from "@/components/usp";
 import { SITE } from "@/lib/site-config";
 
+const homeDescription =
+  "Montessori škola a školka v Nebuželích (adresa Nebužely 3, mlýn Kroužek). Alternativní vzdělávání pro děti od 3 do 12+ let v srdci CHKO Kokořínsko.";
+
 export const metadata = {
-  // title: "Domů",
-  description:
-    "Montessori škola a školka v srdci CHKO Kokořínsko. Alternativní vzdělávání pro děti od 3 do 12+ let v historické budově mlýna Kroužek.",
+  description: homeDescription,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Svou Cestou - Montessori škola a školka",
-    description:
-      "Montessori škola a školka v srdci CHKO Kokořínsko. Alternativní vzdělávání pro děti od 3 do 12+ let v historické budově mlýna Kroužek.",
+    title: SITE.defaultTitle,
+    description: homeDescription,
     url: SITE.canonicalOrigin,
   },
   twitter: {
-    title: "Svou Cestou - Montessori škola a školka",
-    description:
-      "Montessori škola a školka v srdci CHKO Kokořínsko. Alternativní vzdělávání pro děti od 3 do 12+ let v historické budově mlýna Kroužek.",
+    title: SITE.defaultTitle,
+    description: homeDescription,
   },
 };
 
@@ -34,8 +33,7 @@ const websiteSchema = {
   "@type": "WebSite",
   name: "Svou Cestou",
   url: SITE.canonicalOrigin,
-  description:
-    "Montessori škola a školka v srdci CHKO Kokořínsko v historické budově mlýna Kroužek.",
+  description: homeDescription,
 };
 
 export default function Home() {

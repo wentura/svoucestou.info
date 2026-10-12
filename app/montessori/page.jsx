@@ -1,23 +1,23 @@
 import Image from "next/image";
 import { SITE } from "@/lib/site-config";
 
+const desc =
+  "Poznejte Montessori metodu vzdělávání – respektující přístup k rozvoji dítěte. Principy, historie a proč zvolit Montessori školu a školku Svou Cestou v Nebuželích 3 (mlýn Kroužek).";
+
 export const metadata = {
   title: "Montessori vzdělávání",
-  description:
-    "Poznejte Montessori metodu vzdělávání - respektující přístup k rozvoji dítěte. Klíčové principy, historie a proč zvolit Montessori vzdělávání.",
+  description: desc,
   alternates: {
     canonical: "/montessori",
   },
   openGraph: {
     title: "Montessori vzdělávání | Svou Cestou",
-    description:
-      "Poznejte Montessori metodu vzdělávání - respektující přístup k rozvoji dítěte. Klíčové principy, historie a proč zvolit Montessori vzdělávání.",
+    description: desc,
     url: `${SITE.canonicalOrigin}/montessori`,
   },
   twitter: {
     title: "Montessori vzdělávání | Svou Cestou",
-    description:
-      "Poznejte Montessori metodu vzdělávání - respektující přístup k rozvoji dítěte. Klíčové principy, historie a proč zvolit Montessori vzdělávání.",
+    description: desc,
   },
 };
 

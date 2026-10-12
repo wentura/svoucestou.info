@@ -38,34 +38,31 @@ const yesevaOne = Yeseva_One({
 export const metadata = {
   metadataBase: new URL(SITE.canonicalOrigin),
   title: {
-    default: "Svou Cestou, montessori škola a školka",
+    default: SITE.defaultTitle,
     template: "%s | Svou Cestou",
   },
-  description:
-    "Montessori škola a školka v srdci CHKO Kokořínsko v historické budově mlýna Kroužek.",
+  description: SITE.defaultDescription,
   authors: [{ name: "Svou Cestou" }],
   openGraph: {
     type: "website",
     locale: "cs_CZ",
     url: SITE.canonicalOrigin,
     siteName: "Svou Cestou",
-    title: "Svou Cestou, montessori škola a školka",
-    description:
-      "Montessori škola a školka v srdci CHKO Kokořínsko v historické budově mlýna Kroužek.",
+    title: SITE.defaultTitle,
+    description: SITE.defaultDescription,
     images: [
       {
         url: "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732404552/svoucestou.info/hero.webp",
         width: 1200,
         height: 630,
-        alt: "Svou Cestou - Montessori škola a školka",
+        alt: "Svou Cestou - Montessori škola a školka, Nebužely 3, mlýn Kroužek",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Svou Cestou, montessori škola a školka",
-    description:
-      "Montessori škola a školka v srdci CHKO Kokořínsko v historické budově mlýna Kroužek.",
+    title: SITE.defaultTitle,
+    description: SITE.defaultDescription,
     images: [
       "https://res.cloudinary.com/dam7wdzvx/image/upload/v1732404552/svoucestou.info/hero.webp",
     ],
@@ -88,8 +85,7 @@ const organizationSchema = {
   "@type": "EducationalOrganization",
   name: "Svou Cestou",
   alternateName: "Montessori škola a školka Svou Cestou",
-  description:
-    "Montessori škola a školka v srdci CHKO Kokořínsko v historické budově mlýna Kroužek.",
+  description: SITE.defaultDescription,
   url: SITE.canonicalOrigin,
   logo: `${SITE.canonicalOrigin}/svouCestou_logo.webp`,
   address: {
@@ -99,6 +95,12 @@ const organizationSchema = {
     postalCode: SITE.addressPostalCode,
     addressCountry: SITE.addressCountry,
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: SITE.geoLatitude,
+    longitude: SITE.geoLongitude,
+  },
+  hasMap: SITE.googleMapsUrl,
   contactPoint: {
     "@type": "ContactPoint",
     telephone: SITE.contactPhoneHref,
@@ -108,6 +110,7 @@ const organizationSchema = {
   sameAs: [
     "https://www.facebook.com/svoucestoumontessori",
     "https://www.instagram.com/svoucestou/",
+    SITE.googleMapsUrl,
   ],
 };
 

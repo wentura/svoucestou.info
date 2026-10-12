@@ -4,7 +4,7 @@ import Kontakt from "@/components/kontakt";
 import { SITE } from "@/lib/site-config";
 import React from "react";
 
-const desc = `Kontaktujte Montessori školu a školku Svou Cestou. Adresa: ${SITE.addressStreet}, ${SITE.addressPostalCode} ${SITE.addressCity}. Telefon: ${SITE.contactPhoneDisplay}, email: ${SITE.contactEmail}`;
+const desc = `Kontaktujte Montessori školu a školku Svou Cestou v Nebuželích. Adresa: ${SITE.addressStreet}, ${SITE.addressPostalCode} ${SITE.addressCity} (historický mlýn Kroužek, CHKO Kokořínsko). Telefon: ${SITE.contactPhoneDisplay}, email: ${SITE.contactEmail}.`;
 
 export const metadata = {
   title: "Kontakt",
@@ -28,6 +28,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": `${SITE.canonicalOrigin}/kontakt`,
   name: "Svou Cestou - Montessori škola a školka",
+  description: SITE.defaultDescription,
   image: `${SITE.canonicalOrigin}/svouCestou_logo.webp`,
   address: {
     "@type": "PostalAddress",
@@ -38,9 +39,10 @@ const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "50.4167",
-    longitude: "14.5667",
+    latitude: SITE.geoLatitude,
+    longitude: SITE.geoLongitude,
   },
+  hasMap: SITE.googleMapsUrl,
   telephone: SITE.contactPhoneHref,
   email: SITE.contactEmail,
   url: SITE.canonicalOrigin,

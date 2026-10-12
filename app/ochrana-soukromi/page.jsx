@@ -1,22 +1,22 @@
 import { SITE } from "@/lib/site-config";
 
+const desc =
+  "Informace o zpracování osobních údajů, kontaktním formuláři a analytice na webu Montessori školy a školky Svou Cestou (Nebužely 3, mlýn Kroužek).";
+
 export const metadata = {
   title: "Ochrana soukromí",
-  description:
-    "Informace o zpracování osobních údajů, kontaktním formuláři a analytice na webu Svou Cestou.",
+  description: desc,
   alternates: {
     canonical: "/ochrana-soukromi",
   },
   openGraph: {
     title: "Ochrana soukromí | Svou Cestou",
-    description:
-      "Informace o zpracování osobních údajů, kontaktním formuláři a analytice na webu Svou Cestou.",
+    description: desc,
     url: `${SITE.canonicalOrigin}/ochrana-soukromi`,
   },
   twitter: {
     title: "Ochrana soukromí | Svou Cestou",
-    description:
-      "Informace o zpracování osobních údajů, kontaktním formuláři a analytice na webu Svou Cestou.",
+    description: desc,
   },
 };
 

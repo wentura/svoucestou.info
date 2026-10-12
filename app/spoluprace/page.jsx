@@ -1,23 +1,23 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site-config";
 
+const desc =
+  "Možnosti spolupráce s Montessori školou a školkou Svou Cestou v Nebuželích 3 (mlýn Kroužek, CHKO Kokořínsko). Podpora, partneři a způsoby, jak se zapojit.";
+
 export const metadata = {
   title: "Spolupráce",
-  description:
-    "Možnosti spolupráce s Montessori školou a školkou Svou Cestou. Podpora, partneři a způsoby, jak se zapojit.",
+  description: desc,
   alternates: {
     canonical: "/spoluprace",
   },
   openGraph: {
     title: "Spolupráce | Svou Cestou",
-    description:
-      "Možnosti spolupráce s Montessori školou a školkou Svou Cestou. Podpora, partneři a způsoby, jak se zapojit.",
+    description: desc,
     url: `${SITE.canonicalOrigin}/spoluprace`,
   },
   twitter: {
     title: "Spolupráce | Svou Cestou",
-    description:
-      "Možnosti spolupráce s Montessori školou a školkou Svou Cestou. Podpora, partneři a způsoby, jak se zapojit.",
+    description: desc,
   },
 };
 

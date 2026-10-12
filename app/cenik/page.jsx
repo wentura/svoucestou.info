@@ -9,7 +9,7 @@ const skolaPricingTiers = [
   { daysKey: "skolaDaysTier3", priceKey: "skolaTier3", descKey: "skolaTier3Description" },
 ];
 
-const desc = `Ceník Montessori školy a školky Svou Cestou: školka ${formatCzk(
+const desc = `Ceník Montessori školy a školky Svou Cestou (Nebužely 3, mlýn Kroužek): školka ${formatCzk(
   PRICING.monthlyTuitionCzkSkolka
 )} měsíčně, škola od ${formatCzk(PRICING.skolaTier1)} do ${formatCzk(
   PRICING.skolaTier3
